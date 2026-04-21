@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NetOps AI Adventure — Powered by Ziggy</title>
+<title>NetOps AI Adventure - Powered by Ziggy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -575,9 +575,9 @@ const ZIGGY = {
 const SCENEKEYS = ['start','l1_habits','l1_what_is_prompt','l1_prompt_examples','l1_example','l1_ready','l2_intro','l2_examples','l2_howto','l2_connectors','l2_ready','l3_intro','l3_example','l3_build','l3_ready','finish'];
 
 const LEVEL_LABELS = {
-  1: 'Level 1 — Use AI',
-  2: 'Level 2 — Connect tools',
-  3: 'Level 3 — Command center'
+  1: 'Level 1 - Use AI',
+  2: 'Level 2 - Connect tools',
+  3: 'Level 3 - Command center'
 };
 
 const LEVEL_SHARE_PUBLIC = {
@@ -599,7 +599,7 @@ let userDraft = '';
 const scenes = {
   start: {
     lvl: 0, cardClass: '',
-    tag: 'tg-navy', tagText: '🐶 ziggy here — let\'s find your path',
+    tag: 'tg-navy', tagText: '🐶 ziggy here - let\'s find your path',
     title: 'Where are you with AI right now?',
     empathy: '<strong>Wherever you are is exactly the right place to start.</strong> Most of us spend weeks meaning to try AI without ever clicking in. You\'re already ahead by being here.',
     body: 'No wrong answers. This is just a map. Pick where you honestly are today and we\'ll show you what\'s next.',
@@ -612,38 +612,38 @@ const scenes = {
   },
   l1_habits: {
     lvl: 1, cardClass: 'l1',
-    tag: 'tg-teal', tagText: 'level 1 — use AI',
+    tag: 'tg-teal', tagText: 'level 1 - use AI',
     title: 'The habit is the hardest part.',
-    empathy: '<strong>You\'re not late.</strong> Most of the team is right here with you. Consistency beats complexity - one small reach for AI this week matters more than a perfect workflow next month.',
-    body: 'Most people reach for AI when a task is obvious. The real gain is using it on the small, annoying, friction-filled tasks you keep putting off.',
+    empathy: '<strong>You\'re not late.</strong> Most of the team is quietly in the same spot - meaning to try AI, never quite clicking in. Ziggy\'s been watching. One small reach this week beats the perfect workflow you\'ll build next month.',
+    body: 'Most people only reach for AI when a task is obvious. The real payoff is using it on the small, friction-filled tasks you keep putting off - the ones that never feel urgent enough to solve but quietly eat your week.',
     outcome: { type: 'teal', label: 'Three places to start this week',
-      text: '1. An email draft you\'ve been avoiding — paste the context, ask Claude to write it.\n2. A data pull you do manually — describe what you need in plain language.\n3. A long thread you need to understand fast — paste it, ask for a 3-bullet summary.',
-      nugget: 'Your prompt doesn\'t need to be perfect. Describe the problem like you\'d explain it to a smart colleague.' },
+      text: '1. An email draft you\'ve been avoiding. Paste the context, ask Claude to write it.\n2. A data pull you do manually. Describe what you need in plain language.\n3. A long thread you need to catch up on fast. Paste it, ask for a 3-bullet summary.',
+      nugget: 'Your prompt doesn\'t need to be perfect. Describe the problem like you\'d explain it to a colleague who cares but doesn\'t have all day.' },
     choices: [
       { text: 'What exactly is a prompt?', next: 'l1_what_is_prompt' },
       { text: 'Show me a real NetOps example', next: 'l1_example' },
-      { text: 'I\'m doing this already — what\'s next?', next: 'l2_intro' }
+      { text: 'I\'m doing this already - what\'s next?', next: 'l2_intro' }
     ]
   },
   l1_example: {
     lvl: 1, cardClass: 'l1',
-    tag: 'tg-teal', tagText: 'level 1 — real example',
+    tag: 'tg-teal', tagText: 'level 1 - real example',
     title: 'You need to build a coach pool. Fast.',
     body: '8 coaches. French-speaking. ICF-certified. EMEA time zone. Enterprise-ready. Normally: 2–4 hours clicking through Fountain, Looker, and bios.',
     outcome: { type: 'teal', label: 'With Claude',
       text: 'Say: "I need 8 coaches: French-speaking, ICF-certified, EMEA time zone, enterprise readiness above 3.5. Build me a filter checklist and a summary template." That turns a 3-hour job into 20 minutes.',
-      nugget: 'AI doesn\'t replace your judgment — it removes the blank page problem and the manual clicking.' },
+      nugget: 'AI doesn\'t replace your judgment - it removes the blank page problem and the manual clicking.' },
     choices: [
-      { text: 'I\'m ready — what\'s my one action this week?', next: 'l1_ready' },
+      { text: 'I\'m ready - what\'s my one action this week?', next: 'l1_ready' },
       { text: 'I still don\'t get what a prompt is', next: 'l1_what_is_prompt' },
       { text: 'What if my tools could do this automatically?', next: 'l2_intro' }
     ]
   },
   l2_intro: {
     lvl: 2, cardClass: 'l2',
-    tag: 'tg-purple', tagText: 'level 2 — connect your tools',
+    tag: 'tg-purple', tagText: 'level 2 - connect your tools',
     title: 'Your tools don\'t talk to each other. They can.',
-    empathy: '<strong>None of this requires code.</strong> There are two shapes of "connection" - Claude reaching into your tools on demand, or rules that fire automatically when something happens. Both are a few clicks. You pick based on what you want.',
+    empathy: '<strong>None of this requires code.</strong> There are two shapes of "connection" - Claude reaching into your tools on demand, or rules that fire automatically when something happens. Both are a few clicks. You pick based on what you want. Ziggy has watched sharp people stall here for months, certain there was an engineering requirement hiding somewhere. There isn\'t.',
     body: 'Two paths. Neither is technical.<br><br><strong>1. Claude Connectors</strong> - turn on Gmail, Drive, Slack, Calendar inside claude.ai. Now you can say "read my emails from last week" or "post this to #netops" and Claude does it. No external account, no setup.<br><br><strong>2. Zapier / Apps Script</strong> - rules that run without you. "When an email with label X arrives, log it to a Sheet." Fires in the background 24/7.<br><br>Most people start with #1. Worth seeing both before you pick.',
     choices: [
       { text: 'Show me what\'s possible with each', next: 'l2_examples' },
@@ -652,7 +652,7 @@ const scenes = {
   },
   l2_examples: {
     lvl: 2, cardClass: 'l2',
-    tag: 'tg-purple', tagText: 'level 2 — what each path looks like',
+    tag: 'tg-purple', tagText: 'level 2 - what each path looks like',
     title: 'Both paths, real NetOps examples.',
     body: 'Side-by-side - what Claude Connectors can do today vs what a Zapier rule looks like.',
     customHTML: `
@@ -661,24 +661,24 @@ const scenes = {
       <div class="cgrid"><div class="cnode">🔌 Connectors<div class="cnode-sub">Claude reads/writes on demand</div></div><div class="carr">vs</div><div class="cnode">⚡ Zapier<div class="cnode-sub">Rules fire without you</div></div></div>`,
     outcome: { type: 'purple', label: 'How to pick',
       text: 'Connectors: best for "I want Claude to help me with [tool] right now."\nZapier: best for "I want this to happen every time X occurs, without me."\n\nYou\'ll likely end up using both. But start with Connectors - faster value, zero setup friction.',
-      nugget: 'The best automation is the one you actually set up this week. Both paths take under 15 minutes.' },
+      nugget: 'The best automation is the one you actually set up this week. Both paths take under 15 minutes - less time than the meeting you\'d normally spend talking about automating something. Ziggy has done the math.' },
     choices: [
       { text: 'How do I actually set one up?', next: 'l2_howto' },
-      { text: 'I want something that runs itself — show me Level 3', next: 'l3_intro' }
+      { text: 'I want something that runs itself - show me Level 3', next: 'l3_intro' }
     ]
   },
   l2_howto: {
     lvl: 2, cardClass: 'l2',
-    tag: 'tg-purple', tagText: 'level 2 — how to set it up',
+    tag: 'tg-purple', tagText: 'level 2 - how to set it up',
     title: 'Three ways, easiest first.',
     body: 'Pick your comfort level. All three are no-code. All three work for NetOps day-to-day.',
     customHTML: `
-      <div class="iblock"><div class="iblock-title">⭐ Easiest — Claude Connectors (start here)</div><div class="iblock-desc">In <strong>claude.ai</strong> → Connectors directory → turn on Google Drive, Gmail, Slack, Calendar with one click each. No external account, no code, no setup time. Claude will read/write them on demand whenever you ask. The fastest AI wins in your week.</div></div>
-      <div class="iblock"><div class="iblock-title">Middle — Zapier (rules that run without you)</div><div class="iblock-desc"><strong>zapier.com</strong> → sign in with BetterUp SSO → pick a template (new email with label X) → pick an action (add row to Sheet). No code. 10-15 minutes. <strong>BetterUp has Zapier Enterprise for all employees</strong> - multi-step Zaps, Claude-powered steps inside Zaps, and generous task limits all included. Use this for things that should fire automatically, not on-demand.</div></div>
-      <div class="iblock"><div class="iblock-title">Most powerful — Apps Script (Claude writes it)</div><div class="iblock-desc">For when Zapier templates don\'t fit your exact need. Tell Claude: "Write a Google Apps Script that [exactly what you want]. Give me the full working script." Paste into <strong>script.google.com</strong>. Click run. Claude wrote the code - you just paste.</div></div>`,
+      <div class="iblock"><div class="iblock-title">⭐ Easiest - Claude Connectors (start here)</div><div class="iblock-desc">In <strong>claude.ai</strong> → Connectors directory → turn on Google Drive, Gmail, Slack, Calendar with one click each. No external account, no code, no setup time. Claude will read/write them on demand whenever you ask. The fastest AI wins in your week.</div></div>
+      <div class="iblock"><div class="iblock-title">Middle - Zapier (rules that run without you)</div><div class="iblock-desc"><strong>zapier.com</strong> → sign in with BetterUp SSO → pick a template (new email with label X) → pick an action (add row to Sheet). No code. 10-15 minutes. <strong>BetterUp has Zapier Enterprise for all employees</strong> - multi-step Zaps, Claude-powered steps inside Zaps, and generous task limits all included. Use this for things that should fire automatically, not on-demand.</div></div>
+      <div class="iblock"><div class="iblock-title">Most powerful - Apps Script (Claude writes it)</div><div class="iblock-desc">For when Zapier templates don\'t fit your exact need. Tell Claude: "Write a Google Apps Script that [exactly what you want]. Give me the full working script." Paste into <strong>script.google.com</strong>. Click run. Claude wrote the code - you just paste.</div></div>`,
     outcome: { type: 'purple', label: 'Not sure which to pick?',
       text: 'Ask yourself: do I want help with something RIGHT NOW, or do I want something to HAPPEN AUTOMATICALLY later?\n\nNow = Connectors.\nLater/automatically = Zapier (or Apps Script).\n\nMost people\'s first "level 2" move is enabling a Connector. It takes 2 minutes and you see value on the next chat.',
-      nugget: 'Start with one Connector this week. Expand from there. The best automation is always the one you actually turned on.' },
+      nugget: 'Ziggy\'s rule: the best automation is always the one you actually turned on. Start with one Connector this week. Expand from there.' },
     choices: [
       { text: 'Walk me through Connectors (easiest)', next: 'l2_connectors' },
       { text: 'Walk me through Zapier (for automatic rules)', next: 'l2_ready' },
@@ -687,31 +687,31 @@ const scenes = {
   },
   l2_connectors: {
     lvl: 2, cardClass: 'l2',
-    tag: 'tg-purple', tagText: 'level 2 — turn on Connectors',
+    tag: 'tg-purple', tagText: 'level 2 - turn on Connectors',
     title: 'Let Claude read and write your tools directly.',
     empathy: '<strong>This is the fastest AI upgrade you can give yourself.</strong> No external accounts, no code, no waiting for a rule to fire. Turn them on once, and every future Claude chat can reach into your real work. Five minutes, huge payoff.',
     body: 'Five steps, all inside claude.ai. You\'ll have Gmail, Drive, and Slack connected before lunch.',
     customHTML: `
-      <div class="iblock"><div class="iblock-title">Step 1 — Open the Connectors directory</div><div class="iblock-desc">Go to <strong>claude.ai</strong>. Left sidebar → click the <strong>Connectors</strong> icon (looks like 🔌 or grid-of-squares). Or inside any Project → click <strong>"Directory"</strong> → <strong>"Connectors"</strong>.<br><br>You\'ll see a scrollable list. Each connector is a card with a toggle or "+" button.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 2 — Turn on three to start (don\'t overthink it)</div><div class="iblock-desc">The three that pay off immediately for NetOps work:<br>• <strong>Google Drive</strong> - Claude can search your Drive, open docs, read Slides and Sheets<br>• <strong>Gmail</strong> - Claude can search your inbox, summarize threads, draft replies<br>• <strong>Slack</strong> - Claude can search channels, post messages, read threads<br><br>Click the gear/+ icon on each. Authorize with your @betterup.co Google account (for Drive/Gmail) or your BetterUp Slack account. Grant all requested permissions.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 3 — Try your first Connector prompt</div><div class="iblock-desc">Open a new Claude chat. Try one of these verbatim:<br><br>• <em>"Search my Drive for the Executive Suite briefing doc and summarize the top 3 themes."</em><br>• <em>"Find emails from the last 7 days mentioning [coach name] and tell me what\'s outstanding."</em><br>• <em>"Search the #netops-pulse-replies Slack channel for messages from this week and group them by theme."</em><br><br>Claude will reach into the tool, read real data, and respond. This is the "oh wow" moment.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 4 — Add more over the next few days</div><div class="iblock-desc">Once the first three feel natural, browse the rest of the directory. Worth turning on for NetOps work:<br>• <strong>Google Calendar</strong> - "what\'s my Friday look like?"<br>• <strong>Atlassian Rovo</strong> - Jira + Confluence search<br>• <strong>Airtable</strong> - if you use bases for coach/account tracking<br>• <strong>Asana</strong> - task coordination<br><br>Don\'t turn them all on at once. Add as you hit a moment where "I wish Claude could see X."</div></div>
-      <div class="iblock"><div class="iblock-title">Step 5 — If a Connector asks for permissions you\'re unsure about</div><div class="iblock-desc">Read them. They\'ll say things like "read your email" or "send messages on your behalf." That\'s the feature, not a red flag. If a permission looks weird or broader than you\'d expect, hit cancel and ping in #ai-users - someone on the team has probably already vetted it.<br><br>You can revoke a Connector any time: same directory → toggle off.</div></div>`,
+      <div class="iblock"><div class="iblock-title">Step 1 - Open the Connectors directory</div><div class="iblock-desc">Go to <strong>claude.ai</strong>. Left sidebar → click the <strong>Connectors</strong> icon (looks like 🔌 or grid-of-squares). Or inside any Project → click <strong>"Directory"</strong> → <strong>"Connectors"</strong>.<br><br>You\'ll see a scrollable list. Each connector is a card with a toggle or "+" button.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 2 - Turn on three to start (don\'t overthink it)</div><div class="iblock-desc">The three that pay off immediately for NetOps work:<br>• <strong>Google Drive</strong> - Claude can search your Drive, open docs, read Slides and Sheets<br>• <strong>Gmail</strong> - Claude can search your inbox, summarize threads, draft replies<br>• <strong>Slack</strong> - Claude can search channels, post messages, read threads<br><br>Click the gear/+ icon on each. Authorize with your @betterup.co Google account (for Drive/Gmail) or your BetterUp Slack account. Grant all requested permissions.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 3 - Try your first Connector prompt</div><div class="iblock-desc">Open a new Claude chat. Try one of these verbatim:<br><br>• <em>"Search my Drive for the Executive Suite briefing doc and summarize the top 3 themes."</em><br>• <em>"Find emails from the last 7 days mentioning [coach name] and tell me what\'s outstanding."</em><br>• <em>"Search the #netops-pulse-replies Slack channel for messages from this week and group them by theme."</em><br><br>Claude will reach into the tool, read real data, and respond. This is the "oh wow" moment.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 4 - Add more over the next few days</div><div class="iblock-desc">Once the first three feel natural, browse the rest of the directory. Worth turning on for NetOps work:<br>• <strong>Google Calendar</strong> - "what\'s my Friday look like?"<br>• <strong>Atlassian Rovo</strong> - Jira + Confluence search<br>• <strong>Airtable</strong> - if you use bases for coach/account tracking<br>• <strong>Asana</strong> - task coordination<br><br>Don\'t turn them all on at once. Add as you hit a moment where "I wish Claude could see X."</div></div>
+      <div class="iblock"><div class="iblock-title">Step 5 - If a Connector asks for permissions you\'re unsure about</div><div class="iblock-desc">Read them. They\'ll say things like "read your email" or "send messages on your behalf." That\'s the feature, not a red flag. If a permission looks weird or broader than you\'d expect, hit cancel and ping in #ai-users - someone on the team has probably already vetted it.<br><br>You can revoke a Connector any time: same directory → toggle off.</div></div>`,
     outcome: { type: 'purple', label: 'If you don\'t know what to ask your new Connector',
       text: 'Paste this into your chat:\n\n"I just enabled the [Gmail / Drive / Slack / etc.] Connector. Show me 5 things I can ask you to do with it - give me example prompts I can copy and tweak."\n\nClaude will hand you a working menu of queries. Pick one, send it, see what happens. This shortcut alone will save you hours of figuring things out.',
       nugget: 'Connectors = Claude reaches into your tools on demand. Zapier = rules run in the background. You\'ll use both eventually - but start with Connectors this week. Two minutes to enable, immediate value.' },
     choices: [
       { text: 'Now show me Zapier (for automatic rules)', next: 'l2_ready' },
-      { text: 'Show me Level 3 — command center', next: 'l3_intro' },
+      { text: 'Show me Level 3 - command center', next: 'l3_intro' },
       { text: 'Share my level', next: 'finish' }
     ]
   },
   l3_intro: {
     lvl: 3, cardClass: 'l3',
-    tag: 'tg-amber', tagText: 'level 3 — command center',
+    tag: 'tg-amber', tagText: 'level 3 - command center',
     title: 'What if your AI knew your priorities, your tools, and your workflow?',
-    empathy: '<strong>"Command center" sounds big. Your first one isn\'t.</strong> It starts with a doc and one automation. Everything else grows from there - you don\'t need to see the whole staircase to take the first step.',
-    body: 'A command center isn\'t a dashboard you check — it\'s a system that works while you\'re doing other things. It monitors what matters and surfaces only what needs your attention.',
+    empathy: '<strong>"Command center" sounds big. Your first one isn\'t.</strong> It starts with a doc and one automation. Everything else grows from there - you don\'t need to see the whole staircase to take the first step. Ziggy has never seen one of these built from a master plan. They all got built one small Tuesday move at a time.',
+    body: 'A command center isn\'t a dashboard you check - it\'s a system that works while you\'re doing other things. It monitors what matters and surfaces only what needs your attention.',
     choices: [
       { text: 'Show me what a NetOps command center could look like', next: 'l3_example' },
       { text: 'How do I build one?', next: 'l3_build' }
@@ -719,9 +719,9 @@ const scenes = {
   },
   l3_example: {
     lvl: 3, cardClass: 'l3',
-    tag: 'tg-amber', tagText: 'level 3 — example',
+    tag: 'tg-amber', tagText: 'level 3 - example',
     title: 'A command center built around your actual NetOps work.',
-    body: 'Here\'s what a real setup could look like — built on tools you already have access to.',
+    body: 'Here\'s what a real setup could look like - built on tools you already have access to.',
     customHTML: `
       <div class="iblock"><div class="iblock-title">Morning briefing (you trigger, Claude pulls)</div><div class="iblock-desc">Every morning, paste one saved prompt into your Claude Project. Because your Project has connectors to Gmail, Sheets, and Slack, Claude reads across all three and gives you a single summary. Takes 10 seconds instead of opening four tabs. You trigger it - it doesn\'t run on its own.</div></div>
       <div class="iblock"><div class="iblock-title">Coach flag tracker (auto-logging)</div><div class="iblock-desc">Emails with a flag keyword auto-log to a Sheet via Zapier. Claude categorizes: performance, professionalism, scheduling. Sheet stays current without you touching it.</div></div>
@@ -729,7 +729,7 @@ const scenes = {
       <div class="iblock"><div class="iblock-title">Weekly digest (Friday paste, Claude drafts)</div><div class="iblock-desc">Every Friday, paste a saved prompt into your Claude Project. Claude pulls from your Sheet via the Drive connector and drafts a 5-bullet week summary. You edit two lines and send. The mechanism is manual, the effort is minimal.</div></div>`,
     outcome: { type: 'amber', label: 'The key principle',
       text: 'A command center isn\'t built in a day. It\'s built one automation at a time. Each one makes the whole system smarter.',
-      nugget: 'You don\'t need to be technical. You need to know what you want — and ask Claude to help you build it.' },
+      nugget: 'You don\'t need to be technical. You need to know what you want - and ask Claude to help you build it.' },
     choices: [
       { text: 'How do I start building mine?', next: 'l3_build' },
       { text: 'Show me the build list directly', next: 'l3_ready' }
@@ -737,25 +737,25 @@ const scenes = {
   },
   l3_build: {
     lvl: 3, cardClass: 'l3',
-    tag: 'tg-amber', tagText: 'level 3 — build it',
+    tag: 'tg-amber', tagText: 'level 3 - build it',
     title: 'Build your command center in four steps.',
     body: 'Each step takes 30–60 minutes and gives you something useful immediately.',
     customHTML: `
-      <div class="iblock"><div class="iblock-title">Step 1 — Write your context doc</div><div class="iblock-desc">Open a Google Doc. Write: your role, your top 3 priorities, the tools you use daily, and the 3 tasks that waste the most time. This becomes your AI's operating manual.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 2 — Set up a Claude Project</div><div class="iblock-desc">Create a Claude Project. Upload your context doc. Now every conversation starts with Claude already knowing who you are and what matters to you.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 3 — Automate one connector</div><div class="iblock-desc">Pick one tool connection and set it up via Zapier or Apps Script. Data starts moving without you moving it.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 4 — Add a briefing loop</div><div class="iblock-desc">Ask Claude to write a weekly prompt you paste every Monday: what's in your Sheet, what needs action, what to prioritize. Run it every Monday morning.</div></div>`,
+      <div class="iblock"><div class="iblock-title">Step 1 - Write your context doc (and let Claude sharpen it)</div><div class="iblock-desc">Open a Google Doc. Rough bullets: your role, top 3 priorities, daily tools, the 3 tasks that waste the most time. Don't polish. Then paste the whole thing into Claude with this prompt: <em>"Rewrite this as sharper Project Instructions for a NetOps workspace - tighten the language and flag anything missing."</em> Claude hands you back a cleaner version. That's your AI's operating manual. Grinding on perfect wording is the slow path; letting Claude edit the rough version is the fast one.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 2 - Set up a Claude Project</div><div class="iblock-desc">Create a Claude Project. Paste your sharpened doc into the <strong>Project Instructions</strong> field - that's Claude's standing briefing before every chat. Every future conversation in this project starts with Claude already knowing who you are and what matters.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 3 - Automate one connector</div><div class="iblock-desc">Pick one tool connection and set it up via Zapier or Apps Script. Data starts moving without you moving it.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 4 - Add a briefing loop</div><div class="iblock-desc">Ask Claude to write a weekly prompt you paste every Monday: what's in your Sheet, what needs action, what to prioritize. Run it every Monday morning.</div></div>`,
     outcome: { type: 'amber', label: 'Your first action right now',
       text: 'Open a doc. Write three sentences: your role, your top priority this week, and the task you\'d eliminate if you could. That\'s your command center seed.',
-      nugget: 'Most people don\'t build a command center all at once. They build one small automation — and then another. That\'s exactly how it starts.' },
+      nugget: 'Most people don\'t build a command center all at once. They build one small automation, then another. Ziggy has watched dozens grow this way - never once from a master plan.' },
     choices: [
-      { text: 'I\'m ready — show me the build list', next: 'l3_ready' },
-      { text: 'I\'m done — share my level', next: 'finish' }
+      { text: 'I\'m ready - show me the build list', next: 'l3_ready' },
+      { text: 'I\'m done - share my level', next: 'finish' }
     ]
   },
   l1_what_is_prompt: {
     lvl: 1, cardClass: 'l1',
-    tag: 'tg-teal', tagText: 'level 1 — prompting 101',
+    tag: 'tg-teal', tagText: 'level 1 - prompting 101',
     title: 'What exactly is a prompt?',
     empathy: '<strong>If you\'ve ever sent a text, you can write a prompt.</strong> This isn\'t a technical skill - it\'s clear communication with an extra step.',
     body: 'A prompt is just what you type into the chat box. What changes the answer is how much context, task, and format you give it.',
@@ -773,7 +773,7 @@ const scenes = {
   },
   l1_prompt_examples: {
     lvl: 1, cardClass: 'l1',
-    tag: 'tg-teal', tagText: 'level 1 — copy-paste prompts',
+    tag: 'tg-teal', tagText: 'level 1 - copy-paste prompts',
     title: 'Four prompts you can use today.',
     body: 'Steal these. Change the details. Send them to Claude or Gemini this week.',
     customHTML: `
@@ -785,76 +785,76 @@ const scenes = {
       text: 'If the first response isn\'t right, just reply - "make it shorter," "more formal," "skip the intro." Every reply teaches Claude what you want. The best output usually comes on the second or third try.',
       nugget: 'You\'re having a conversation, not filling out a form. Push back. Ask for changes. That\'s how you get to great.' },
     choices: [
-      { text: 'I\'m ready — what\'s my one action?', next: 'l1_ready' },
+      { text: 'I\'m ready - what\'s my one action?', next: 'l1_ready' },
       { text: 'What about connecting my tools?', next: 'l2_intro' }
     ]
   },
   l1_ready: {
     lvl: 1, cardClass: 'l1',
-    tag: 'tg-teal', tagText: 'level 1 — your one action',
+    tag: 'tg-teal', tagText: 'level 1 - your one action',
     title: 'Your first real try, step by step.',
     empathy: '<strong>AI can feel intimidating. It\'s really just a chat box.</strong> No hidden features, no technical setup. If you can text a friend, you can do this - we\'ll walk through every click.',
     body: 'Six small steps. Go in order. None of them take more than a minute.',
     customHTML: `
-      <div class="iblock"><div class="iblock-title">Step 1 — Pick your AI (either works)</div><div class="iblock-desc"><strong>Claude:</strong> go to <strong>claude.ai</strong> → "Sign up" → use your @betterup.co Google account.<br><strong>Gemini:</strong> go to <strong>gemini.google.com</strong> → you\'re likely already signed in via work Google.<br><br>Don\'t overthink which one. Pick either. Both are free and both are good at what you need this week.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 2 — What you\'ll see (no surprises)</div><div class="iblock-desc">A mostly empty screen with a big text box at the bottom. The box says something like "Message Claude" or "Ask Gemini anything." That\'s it. That\'s the whole interface. You type, you press enter, you get an answer.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 3 — Pick one real task from your week</div><div class="iblock-desc">Start tiny. Good first tasks:<br>• An email you\'ve been putting off writing<br>• A long Slack thread you need to catch up on<br>• Meeting notes you need to turn into a summary<br>• A filter checklist you\'re building manually<br><br>Rule: if it normally takes you more than 15 minutes, pick something smaller. Momentum beats ambition on try #1.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 4 — Type it like you\'re explaining to a colleague</div><div class="iblock-desc">Paste the context, describe what you want, say the format.<br><br><em>Example:</em> "I need to draft an email declining a vendor. They\'re nice but we don\'t have budget. Keep it warm, 3-4 sentences, not corporate."<br><br><strong>⚠️ Safety note:</strong> Don\'t paste anything marked confidential - real member data, NDAs, legal docs. Generic work content and summaries are fine.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 5 — If the answer isn\'t right, just keep talking</div><div class="iblock-desc">This is where most people quit too early. The first answer is rarely the best one. Just reply with plain English:<br>• "Make it shorter"<br>• "More casual - we already know each other"<br>• "Skip the intro paragraph"<br>• "Rewrite this as if I\'m the vendor\'s friend"<br><br>Treat it like giving feedback to a smart intern. Two or three rounds and you\'re there.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 6 — Drop one line in your NetOps AI Pulse DM</div><div class="iblock-desc">Whatever happened - magic, weird, disappointing, surprising - share one sentence about it. The team learns from each other\'s tries, not from polished outcomes.</div></div>`,
-    outcome: { type: 'teal', label: 'If you freeze at the blank box — ask this first',
+      <div class="iblock"><div class="iblock-title">Step 1 - Pick your AI (either works)</div><div class="iblock-desc"><strong>Claude:</strong> go to <strong>claude.ai</strong> → "Sign up" → use your @betterup.co Google account.<br><strong>Gemini:</strong> go to <strong>gemini.google.com</strong> → you\'re likely already signed in via work Google.<br><br>Don\'t overthink which one. Pick either. Both are free and both are good at what you need this week.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 2 - What you\'ll see (no surprises)</div><div class="iblock-desc">A mostly empty screen with a big text box at the bottom. The box says something like "Message Claude" or "Ask Gemini anything." That\'s it. That\'s the whole interface. You type, you press enter, you get an answer.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 3 - Pick one real task from your week</div><div class="iblock-desc">Start tiny. Good first tasks:<br>• An email you\'ve been putting off writing<br>• A long Slack thread you need to catch up on<br>• Meeting notes you need to turn into a summary<br>• A filter checklist you\'re building manually<br><br>Rule: if it normally takes you more than 15 minutes, pick something smaller. Momentum beats ambition on try #1.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 4 - Type it like you\'re explaining to a colleague</div><div class="iblock-desc">Paste the context, describe what you want, say the format.<br><br><em>Example:</em> "I need to draft an email declining a vendor. They\'re nice but we don\'t have budget. Keep it warm, 3-4 sentences, not corporate."<br><br><strong>⚠️ Safety note:</strong> Don\'t paste anything marked confidential - real member data, NDAs, legal docs. Generic work content and summaries are fine.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 5 - If the answer isn\'t right, just keep talking</div><div class="iblock-desc">This is where most people quit too early. The first answer is rarely the best one. Just reply with plain English:<br>• "Make it shorter"<br>• "More casual - we already know each other"<br>• "Skip the intro paragraph"<br>• "Rewrite this as if I\'m the vendor\'s friend"<br><br>Treat it like giving feedback to a smart intern. Two or three rounds and you\'re there.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 6 - Drop one line in your NetOps AI Pulse DM</div><div class="iblock-desc">Whatever happened - magic, weird, disappointing, surprising - share one sentence about it. The team learns from each other\'s tries, not from polished outcomes.</div></div>`,
+    outcome: { type: 'teal', label: 'If you freeze at the blank box - ask this first',
       text: 'Paste this into Claude or Gemini:\n\n"I\'m new to AI. I want your help with [what you\'re trying to do]. I\'m not sure how to phrase my request. Can you ask me 3 questions that would help you give me a great answer?"\n\nThe AI will interview YOU. Answer the questions. Then it hands you back a perfect result. This is the single most useful move for beginners.',
       nugget: 'Every person on this team felt weird the first time. It gets weird-good, then normal, then invisible. You\'re already past the hardest step by reading this.' },
     choices: [
-      { text: 'Show me Level 2 — connect my tools', next: 'l2_intro' },
+      { text: 'Show me Level 2 - connect my tools', next: 'l2_intro' },
       { text: 'Share my level', next: 'finish' }
     ]
   },
   l2_ready: {
     lvl: 2, cardClass: 'l2',
-    tag: 'tg-purple', tagText: 'level 2 — your one action',
+    tag: 'tg-purple', tagText: 'level 2 - your one action',
     title: 'Your first Zap, step by step.',
     empathy: '<strong>Zapier looks intimidating the first time. It\'s not.</strong> The hardest part is clicking "Try this template" - everything after is picking your accounts from dropdowns. If you get stuck, it\'s usually on Step 4 or 5. We\'ll flag those.',
     body: 'Follow these in order. Every step matters - especially the test (Step 4) and the on-switch (Step 5), which is the step most people miss.',
     customHTML: `
-      <div class="iblock"><div class="iblock-title">Step 1 — Sign in with your BetterUp SSO</div><div class="iblock-desc">Go to <strong>zapier.com</strong> → "Log in" → "Log in with SSO" → enter your @betterup.com or @betterup.co email → Okta will redirect and authenticate you. <strong>BetterUp has Zapier Enterprise for everyone</strong>, so you\'re not on the free tier - you get multi-step Zaps, Claude-powered steps inside Zaps, unlimited apps, and plenty of task runs. If SSO doesn\'t recognize you, ping #ai-users to get added to the workspace.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 2 — Start from a template (never from scratch)</div><div class="iblock-desc">In the left nav, click <strong>"Explore"</strong> or <strong>"Templates"</strong>. Search one of these, which map to real NetOps pain:<br>• "Gmail to Google Sheets" (log flagged emails)<br>• "Slack to Google Sheets" (log messages from a channel)<br>• "Google Form to Slack" (alert on form submission)<br><br>Click <strong>"Try this template"</strong> on the one that fits. Templates pre-build the hard parts - triggers, actions, field mapping.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 3 — Connect your accounts (OAuth popups)</div><div class="iblock-desc">Zapier will ask you to connect each app one at a time. A Google or Slack popup appears → click <strong>"Allow"</strong>. Then fill in the dropdowns it shows you:<br>• Which Gmail label/search?<br>• Which Sheet and which tab?<br>• Which Slack channel?<br><br>If a field confuses you, hover the <strong>(?)</strong> icon - Zapier explains inline.</div></div>
-      <div class="iblock"><div class="iblock-title">⚠️ Step 4 — Test before turning it on</div><div class="iblock-desc">Zapier offers a <strong>"Test step"</strong> button at each stage. <strong>Click it.</strong> It pulls a real recent email/message and shows you exactly what would happen.<br><br>If the test row lands in the wrong column or the data looks weird, fix the field mapping now. Way easier than debugging a broken live Zap later.</div></div>
-      <div class="iblock"><div class="iblock-title">⚠️ Step 5 — Flip the switch (the step everyone misses)</div><div class="iblock-desc">Top-right corner of the editor: a toggle labeled <strong>"Publish"</strong> or <strong>"Turn Zap on."</strong> Until you flip this, nothing runs - your Zap just sits as a draft.<br><br>If your Zap isn\'t doing anything after setup, this is almost always why.</div></div>
-      <div class="iblock"><div class="iblock-title">Step 6 — Check in after a week</div><div class="iblock-desc">Left nav → <strong>"Zap History"</strong>. Every run shows up here, success or failure. If something broke, click the failed run to see the error. Then paste the error into Claude and ask what it means.</div></div>`,
-    outcome: { type: 'purple', label: 'If you get stuck — ask Claude',
+      <div class="iblock"><div class="iblock-title">Step 1 - Sign in with your BetterUp SSO</div><div class="iblock-desc">Go to <strong>zapier.com</strong> → "Log in" → "Log in with SSO" → enter your @betterup.com or @betterup.co email → Okta will redirect and authenticate you. <strong>BetterUp has Zapier Enterprise for everyone</strong>, so you\'re not on the free tier - you get multi-step Zaps, Claude-powered steps inside Zaps, unlimited apps, and plenty of task runs. If SSO doesn\'t recognize you, ping #ai-users to get added to the workspace.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 2 - Start from a template (never from scratch)</div><div class="iblock-desc">In the left nav, click <strong>"Explore"</strong> or <strong>"Templates"</strong>. Search one of these, which map to real NetOps pain:<br>• "Gmail to Google Sheets" (log flagged emails)<br>• "Slack to Google Sheets" (log messages from a channel)<br>• "Google Form to Slack" (alert on form submission)<br><br>Click <strong>"Try this template"</strong> on the one that fits. Templates pre-build the hard parts - triggers, actions, field mapping.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 3 - Connect your accounts (OAuth popups)</div><div class="iblock-desc">Zapier will ask you to connect each app one at a time. A Google or Slack popup appears → click <strong>"Allow"</strong>. Then fill in the dropdowns it shows you:<br>• Which Gmail label/search?<br>• Which Sheet and which tab?<br>• Which Slack channel?<br><br>If a field confuses you, hover the <strong>(?)</strong> icon - Zapier explains inline.</div></div>
+      <div class="iblock"><div class="iblock-title">⚠️ Step 4 - Test before turning it on</div><div class="iblock-desc">Zapier offers a <strong>"Test step"</strong> button at each stage. <strong>Click it.</strong> It pulls a real recent email/message and shows you exactly what would happen.<br><br>If the test row lands in the wrong column or the data looks weird, fix the field mapping now. Way easier than debugging a broken live Zap later.</div></div>
+      <div class="iblock"><div class="iblock-title">⚠️ Step 5 - Flip the switch (the step everyone misses)</div><div class="iblock-desc">Top-right corner of the editor: a toggle labeled <strong>"Publish"</strong> or <strong>"Turn Zap on."</strong> Until you flip this, nothing runs - your Zap just sits as a draft.<br><br>If your Zap isn\'t doing anything after setup, this is almost always why.</div></div>
+      <div class="iblock"><div class="iblock-title">Step 6 - Check in after a week</div><div class="iblock-desc">Left nav → <strong>"Zap History"</strong>. Every run shows up here, success or failure. If something broke, click the failed run to see the error. Then paste the error into Claude and ask what it means.</div></div>`,
+    outcome: { type: 'purple', label: 'If you get stuck - ask Claude',
       text: 'Paste this into Claude or Gemini:\n\n"I\'m setting up a Zapier Zap that [what you want it to do]. I\'m stuck at [the step]. The screen shows [what you see]. Walk me through the exact next click like I\'ve never used Zapier."\n\nClaude knows Zapier\'s UI well and will give you button names, not theory. If you hit an error, paste it verbatim - "what does this mean and how do I fix it?"',
       nugget: 'Nobody sets up their first Zap without at least one confusing moment. You will, and you\'ll get past it. Ten minutes of confusion saves you hours every week.' },
     choices: [
-      { text: 'Show me Level 3 — command center', next: 'l3_intro' },
+      { text: 'Show me Level 3 - command center', next: 'l3_intro' },
       { text: 'Share my level', next: 'finish' }
     ]
   },
   l3_ready: {
     lvl: 3, cardClass: 'l3',
-    tag: 'tg-amber', tagText: 'level 3 — your build list',
+    tag: 'tg-amber', tagText: 'level 3 - your build list',
     title: 'Your command center, week by week.',
-    empathy: '<strong>"Command center" sounds technical. This build isn\'t.</strong> You\'ll write one doc, click through a few menus, and paste code Claude writes for you. No engineering background required - we\'ll show you exactly what to click and give you a fallback for every step.',
+    empathy: '<strong>"Command center" sounds technical. This build isn\'t.</strong> You\'ll write one doc, click through a few menus, and paste code Claude writes for you. No engineering background required. Ziggy has walked plenty of non-technical folks through this exact path - we\'ll show you exactly what to click and give you a fallback for every step.',
     body: 'Four weeks. One move per week. Pace matters - this is compounding, not sprinting.',
     customHTML: `
-      <div class="iblock"><div class="iblock-title">Week 1 — Step 1: Write your Project Instructions (30 min)</div><div class="iblock-desc"><strong>This is the most important piece of your command center.</strong> Claude Projects have a field called "Project Instructions" - think of it as Claude\'s briefing before every single chat. Whatever you put here, Claude reads first, every time. That\'s why the sharper this doc, the sharper every answer.<br><br>Open a new Google Doc. Paste this template and fill in each section in plain English. Don\'t polish - first draft is the goal. (You\'ll paste this whole doc into Claude in Step 2.)<br><br><strong>## Who I am</strong><br>- Role:<br>- Team:<br>- What my days mostly look like:<br><br><strong>## What matters right now</strong><br>- Top 3 priorities this quarter:<br>- What I\'m trying to get off my plate:<br><br><strong>## Where I live</strong><br>- Slack channels I check daily:<br>- Gmail labels I care about:<br>- Sheets/tools I touch most:<br><br><strong>## What wastes my time</strong><br>- 3 recurring tasks I\'d automate if I could:<br><br><strong>## How I want Claude to respond</strong><br>- Tone: (e.g., direct, warm, no fluff)<br>- Length: (e.g., short by default, longer only when I ask)<br>- Format: (e.g., bullets over paragraphs, bold the action items)<br>- When unsure: (e.g., ask me a clarifying question instead of guessing)<br><br><strong>## What to avoid</strong><br>- Don\'t over-explain things I already know<br>- Don\'t hedge or add disclaimers<br>- Don\'t summarize what I just said back to me</div></div>
-      <div class="iblock"><div class="iblock-title">Week 1 — Step 2: Install your doc as Project Instructions (10 min)</div><div class="iblock-desc">You\'re about to paste your doc into Claude\'s "Project Instructions" box. That field is Claude\'s standing briefing - it reads before every chat in this project. This is where your doc stops being a Google Doc and starts shaping every answer.<br><br>1. Go to <strong>claude.ai</strong> and log in<br>2. Left nav → click <strong>"Projects"</strong><br>3. Top right → click <strong>"Create project"</strong><br>4. Name it something like "My NetOps workspace"<br>5. Click <strong>"Set project instructions"</strong> (or "Add custom instructions" / "Edit instructions")<br>6. Copy your entire context doc from Step 1 → paste the full thing into that box<br>7. Save<br><br><strong>What changes immediately:</strong> every new chat inside this project starts with Claude already knowing who you are, what matters, and how you want it to respond. You\'ll stop re-explaining yourself, and answers will get noticeably sharper on day one.<br><br><strong>Optional extra:</strong> on the same project page, you\'ll see a "Project knowledge" section where you can upload additional files (a coaching doc, a playbook, last quarter\'s OKRs). Instructions = how Claude behaves. Knowledge = what Claude references. Start with just the instructions; add knowledge later.</div></div>
-      <div class="iblock"><div class="iblock-title">Week 2 — Step 3: Connect your tools to your Project</div><div class="iblock-desc">You\'ve got three paths. Pick based on what you want - none are technical.<br><br><strong>Path A - Claude Connectors (fastest, start here)</strong><br>Inside claude.ai, turn on Gmail, Drive, Slack, Calendar. Now your Project can read them on demand: "check the Drive doc and tell me what changed" or "summarize emails from this week about X." Zero setup beyond clicking authorize. Full walkthrough is in the Level 2 Connectors scene.<br><br><strong>Path B - Zapier (for automatic rules)</strong><br>When you want something to happen without you - "every new email with label X logs to a Sheet." Follow the 6-step Zapier guide from Level 2. 10-15 minutes, no code.<br><br><strong>Path C - Apps Script (when Zapier templates don\'t fit)</strong><br>You\'re not writing code - Claude is. Tell your Claude Project: <em>"Write a Google Apps Script that [exactly what you want]. Give me the full working script."</em> Paste what Claude gives you into <strong>script.google.com</strong> → click ▶ Run → allow Gmail + Sheets permissions → left sidebar clock icon → Add Trigger → run every 10 minutes. If anything errors, paste the red text back to Claude: "what does this mean and how do I fix it?"</div></div>
-      <div class="iblock"><div class="iblock-title">Week 3 — Step 4: Your Monday briefing</div><div class="iblock-desc">Inside your Claude Project, ask:<br><br><em>"Write me a weekly prompt I can paste every Monday morning. It should: 1) ask what\'s on my calendar this week, 2) check the Flag Tracker sheet for new entries since last Monday, 3) tell me my top 3 priorities based on my context doc. Format the output as a short DM I could send to myself."</em><br><br>Claude will give you a reusable prompt. Save it in a note somewhere obvious. Every Monday at 8am, paste it into your project. That\'s your command center briefing - it will get more useful as your sheets fill up.</div></div>
-      <div class="iblock"><div class="iblock-title">Week 4 — Step 5: Iterate, don\'t rebuild</div><div class="iblock-desc">Don\'t start new projects. Instead: which of the 4 pieces needs a tweak? Add a second auto-logged sheet? Refine the briefing prompt? Expand the context doc with what you learned?<br><br>This is where command centers get real - through small additions, not from-scratch rebuilds.</div></div>`,
-    outcome: { type: 'amber', label: 'If you get stuck — your safety net',
+      <div class="iblock"><div class="iblock-title">Week 1 - Step 1: Write your Project Instructions (30 min)</div><div class="iblock-desc"><strong>This is the most important piece of your command center.</strong> Claude Projects have a field called "Project Instructions" - think of it as Claude\'s briefing before every single chat. Whatever you put here, Claude reads first, every time. That\'s why the sharper this doc, the sharper every answer.<br><br>Open a new Google Doc. Paste this template and fill in each section in plain English. Don\'t polish - first draft is the goal. (You\'ll paste this whole doc into Claude in Step 2.)<br><br><strong>## Who I am</strong><br>- Role:<br>- Team:<br>- What my days mostly look like:<br><br><strong>## What matters right now</strong><br>- Top 3 priorities this quarter:<br>- What I\'m trying to get off my plate:<br><br><strong>## Where I live</strong><br>- Slack channels I check daily:<br>- Gmail labels I care about:<br>- Sheets/tools I touch most:<br><br><strong>## What wastes my time</strong><br>- 3 recurring tasks I\'d automate if I could:<br><br><strong>## How I want Claude to respond</strong><br>- Tone: (e.g., direct, warm, no fluff)<br>- Length: (e.g., short by default, longer only when I ask)<br>- Format: (e.g., bullets over paragraphs, bold the action items)<br>- When unsure: (e.g., ask me a clarifying question instead of guessing)<br><br><strong>## What to avoid</strong><br>- Don\'t over-explain things I already know<br>- Don\'t hedge or add disclaimers<br>- Don\'t summarize what I just said back to me<br><br><strong>Smart move before Step 2 - let Claude sharpen it for you:</strong> don\'t spend 30 minutes trying to write perfect instructions. Fill the template in quickly, then paste the whole doc into a fresh Claude chat with this prompt:<br><br><em>"Here\'s my rough Project Instructions for a NetOps workspace. Rewrite them as sharper, more direct Project Instructions - keep the structure, tighten the language, and flag anything missing I should add."</em><br><br>Claude hands you back a cleaner version written in a tone Claude itself responds to best. That\'s what you install in Step 2. Turns 30 minutes of writing into 10 minutes of editing, and the final doc is noticeably sharper than whatever you\'d draft alone.</div></div>
+      <div class="iblock"><div class="iblock-title">Week 1 - Step 2: Install your doc as Project Instructions (10 min)</div><div class="iblock-desc">You\'re about to paste your doc (the sharpened version Claude wrote back to you in Step 1) into Claude\'s "Project Instructions" box. That field is Claude\'s standing briefing - it reads before every chat in this project. This is where your doc stops being a Google Doc and starts shaping every answer.<br><br>1. Go to <strong>claude.ai</strong> and log in<br>2. Left nav → click <strong>"Projects"</strong><br>3. Top right → click <strong>"Create project"</strong><br>4. Name it something like "My NetOps workspace"<br>5. Click <strong>"Set project instructions"</strong> (or "Add custom instructions" / "Edit instructions")<br>6. Copy your entire context doc from Step 1 → paste the full thing into that box<br>7. Save<br><br><strong>What changes immediately:</strong> every new chat inside this project starts with Claude already knowing who you are, what matters, and how you want it to respond. You\'ll stop re-explaining yourself, and answers will get noticeably sharper on day one.<br><br><strong>Optional extra:</strong> on the same project page, you\'ll see a "Project knowledge" section where you can upload additional files (a coaching doc, a playbook, last quarter\'s OKRs). Instructions = how Claude behaves. Knowledge = what Claude references. Start with just the instructions; add knowledge later.</div></div>
+      <div class="iblock"><div class="iblock-title">Week 2 - Step 3: Connect your tools to your Project</div><div class="iblock-desc">You\'ve got three paths. Pick based on what you want - none are technical.<br><br><strong>Path A - Claude Connectors (fastest, start here)</strong><br>Inside claude.ai, turn on Gmail, Drive, Slack, Calendar. Now your Project can read them on demand: "check the Drive doc and tell me what changed" or "summarize emails from this week about X." Zero setup beyond clicking authorize. Full walkthrough is in the Level 2 Connectors scene.<br><br><strong>Path B - Zapier (for automatic rules)</strong><br>When you want something to happen without you - "every new email with label X logs to a Sheet." Follow the 6-step Zapier guide from Level 2. 10-15 minutes, no code.<br><br><strong>Path C - Apps Script (when Zapier templates don\'t fit)</strong><br>You\'re not writing code - Claude is. Tell your Claude Project: <em>"Write a Google Apps Script that [exactly what you want]. Give me the full working script."</em> Paste what Claude gives you into <strong>script.google.com</strong> → click ▶ Run → allow Gmail + Sheets permissions → left sidebar clock icon → Add Trigger → run every 10 minutes. If anything errors, paste the red text back to Claude: "what does this mean and how do I fix it?"</div></div>
+      <div class="iblock"><div class="iblock-title">Week 3 - Step 4: Your Monday briefing</div><div class="iblock-desc">Inside your Claude Project, ask:<br><br><em>"Write me a weekly prompt I can paste every Monday morning. It should: 1) ask what\'s on my calendar this week, 2) check the Flag Tracker sheet for new entries since last Monday, 3) tell me my top 3 priorities based on my context doc. Format the output as a short DM I could send to myself."</em><br><br>Claude will give you a reusable prompt. Save it in a note somewhere obvious. Every Monday at 8am, paste it into your project. That\'s your command center briefing - it will get more useful as your sheets fill up.</div></div>
+      <div class="iblock"><div class="iblock-title">Week 4 - Step 5: Iterate, don\'t rebuild</div><div class="iblock-desc">Don\'t start new projects. Instead: which of the 4 pieces needs a tweak? Add a second auto-logged sheet? Refine the briefing prompt? Expand the context doc with what you learned?<br><br>This is where command centers get real - through small additions, not from-scratch rebuilds.</div></div>`,
+    outcome: { type: 'amber', label: 'If you get stuck - your safety net',
       text: 'Paste this into your Claude Project:\n\n"I\'m trying to [what you\'re building]. I\'m at [the step]. I don\'t understand [what\'s confusing]. Explain it like I\'ve never built anything like this before. Then tell me exactly what to click or paste next."\n\nClaude knows Claude Projects, Apps Script, and Zapier well. For errors: paste the exact text, ask "what does this mean and how do I fix it?" This prompt is your safety net through the whole build.',
       nugget: 'Four weeks feels long. But in week 5 you\'ll have something that saves you 3-5 hours every week, forever. That\'s the trade - one month of small clicks for years of bought-back time.' },
     choices: [
-      { text: 'I\'m done — share my level', next: 'finish' }
+      { text: 'I\'m done - share my level', next: 'finish' }
     ]
   },
   finish: {
     lvl: 3, cardClass: 'l3',
     tag: 'tg-navy', tagText: '🐶 ziggy says: nice work!',
     title: 'You finished the adventure.',
-    body: 'Share what level you reached with the team. Every share helps build the collective — your insight might be exactly what a teammate needs to hear this week.',
+    body: 'Share what level you reached with the team. Every share helps build the collective - your insight might be exactly what a teammate needs to hear this week.',
     choices: [
       { text: 'Play again from the beginning', next: 'start' }
     ]
