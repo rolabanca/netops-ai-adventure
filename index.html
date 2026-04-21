@@ -720,29 +720,39 @@
   }
   .footer strong { color: #fff; }
   .footer-cta {
-    margin-top: 1.5rem;
-    padding: 1rem 1.25rem;
-    border: 1px solid rgba(228,19,122,.3);
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(228,19,122,.08) 0%, rgba(127,119,221,.08) 100%);
-    backdrop-filter: blur(8px);
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 13px;
-    color: rgba(255,255,255,.75);
+    margin: 2rem auto 0;
+    padding: 1.75rem 2rem;
+    border: 1px solid rgba(228,19,122,.35);
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(228,19,122,.10) 0%, rgba(127,119,221,.10) 100%);
+    backdrop-filter: blur(12px);
+    max-width: 620px;
+    font-size: 15.5px;
+    color: rgba(255,255,255,.85);
+    position: relative;
+    overflow: hidden;
+  }
+  .footer-cta::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(228,19,122,.18) 0%, transparent 70%);
+    pointer-events: none;
   }
   .footer-cta a {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
+    font-size: 16.5px;
     transition: color .15s;
   }
   .footer-cta a:hover { color: var(--rubine-bright); }
   .footer-cta-sub {
-    font-size: 11.5px;
-    color: rgba(255,255,255,.5);
-    margin-top: .35rem;
+    font-size: 13.5px;
+    color: rgba(255,255,255,.6);
+    margin-top: .65rem;
+    line-height: 1.55;
   }
 </style>
 </head>
