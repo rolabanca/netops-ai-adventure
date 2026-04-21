@@ -6,7 +6,7 @@
 <title>NetOps AI Adventure - Powered by Ziggy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -122,11 +122,14 @@
     margin-bottom: .5rem;
   }
   .hero-title {
-    font-size: 28px;
-    font-weight: 700;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 34px;
+    font-weight: 600;
+    font-variation-settings: 'opsz' 96;
     color: #fff;
-    margin-bottom: .3rem;
-    line-height: 1.2;
+    margin-bottom: .35rem;
+    line-height: 1.1;
+    letter-spacing: -.015em;
   }
   .hero-sub {
     font-size: 14px;
@@ -219,17 +222,28 @@
   .lvl.l2 { border-color: var(--purple); background: var(--purple-light); color: var(--purple-dark); opacity: 1; }
   .lvl.l3 { border-color: var(--amber); background: var(--amber-light); color: var(--amber-dark); opacity: 1; }
 
-  /* Card */
+  /* Card - editorial depth, warmer shadow */
   .card {
     background: var(--bg);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.75rem;
+    border: 1px solid rgba(10,22,40,.06);
+    border-radius: 16px;
+    padding: 2rem 2rem 1.75rem;
     margin-bottom: .75rem;
-    border-top-width: 3px;
-    border-top-color: var(--border);
-    box-shadow: 0 4px 20px rgba(10,22,40,.04);
+    border-top: 3px solid var(--border);
+    box-shadow:
+      0 1px 2px rgba(10,22,40,.04),
+      0 8px 24px rgba(206,0,88,.05),
+      0 24px 48px rgba(10,22,40,.06);
     position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(206,0,88,.04) 0%, transparent 70%);
+    pointer-events: none;
   }
   .card.l1 { border-top-color: var(--teal); }
   .card.l2 { border-top-color: var(--purple); }
@@ -262,26 +276,41 @@
   .tag {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    font-size: 11px;
+    gap: 6px;
+    font-size: 10.5px;
     font-weight: 700;
-    padding: 4px 11px;
-    border-radius: 20px;
+    padding: 3px 0;
+    border-radius: 0;
     margin-bottom: 1rem;
-    letter-spacing: .05em;
+    letter-spacing: .14em;
     text-transform: uppercase;
+    background: transparent !important;
+    position: relative;
   }
-  .tg-teal { background: var(--teal-light); color: var(--teal-dark); }
-  .tg-purple { background: var(--purple-light); color: var(--purple-dark); }
-  .tg-amber { background: var(--amber-light); color: var(--amber-dark); }
-  .tg-navy { background: #e6ecf7; color: var(--navy); }
+  .tag::before {
+    content: '';
+    width: 18px;
+    height: 1.5px;
+    border-radius: 1px;
+  }
+  .tg-teal { color: var(--teal-dark); }
+  .tg-teal::before { background: var(--teal); }
+  .tg-purple { color: var(--purple-dark); }
+  .tg-purple::before { background: var(--purple); }
+  .tg-amber { color: var(--amber-dark); }
+  .tg-amber::before { background: var(--amber); }
+  .tg-navy { color: var(--navy); }
+  .tg-navy::before { background: var(--rubine); }
 
   .scene-title {
-    font-size: 21px;
-    font-weight: 700;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    font-variation-settings: 'opsz' 72;
     color: var(--text);
-    margin-bottom: .6rem;
-    line-height: 1.3;
+    margin-bottom: .75rem;
+    line-height: 1.15;
+    letter-spacing: -.018em;
   }
   .scene-body {
     font-size: 15px;
@@ -290,22 +319,23 @@
     margin-bottom: 1.25rem;
   }
 
-  /* Outcome box */
+  /* Outcome box - editorial callout */
   .obox {
     border-left: 3px solid var(--teal);
-    padding: .85rem 1rem;
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    margin-bottom: 1.25rem;
+    padding: 1.1rem 1.25rem;
+    border-radius: 0 12px 12px 0;
+    margin: 1.5rem 0 1.25rem;
+    position: relative;
   }
-  .obox.teal { background: var(--teal-light); border-left-color: var(--teal); }
-  .obox.purple { background: var(--purple-light); border-left-color: var(--purple); }
-  .obox.amber { background: var(--amber-light); border-left-color: var(--amber); }
+  .obox.teal { background: linear-gradient(135deg, rgba(78,184,160,.10) 0%, rgba(78,184,160,.04) 100%); border-left-color: var(--teal); }
+  .obox.purple { background: linear-gradient(135deg, rgba(127,119,221,.10) 0%, rgba(127,119,221,.04) 100%); border-left-color: var(--purple); }
+  .obox.amber { background: linear-gradient(135deg, rgba(239,159,39,.12) 0%, rgba(239,159,39,.04) 100%); border-left-color: var(--amber); }
   .olabel {
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: .06em;
-    margin-bottom: 5px;
+    letter-spacing: .12em;
+    margin-bottom: .5rem;
   }
   .obox.teal .olabel { color: var(--teal-dark); }
   .obox.purple .olabel { color: var(--purple-dark); }
@@ -323,24 +353,45 @@
   .obox.purple .nugget { color: var(--purple-dark); }
   .obox.amber .nugget { color: var(--amber-dark); }
 
-  /* Inner blocks */
+  /* Inner blocks - editorial threaded steps, not form fields */
   .iblock {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: .9rem 1rem;
-    margin: .6rem 0;
+    background: transparent;
+    border: none;
+    border-left: 2px solid var(--border);
+    border-radius: 0;
+    padding: .15rem 0 1.1rem 1.25rem;
+    margin: 0;
+    position: relative;
   }
+  .iblock + .iblock { margin-top: .1rem; }
+  .card.l1 .iblock { border-left-color: rgba(78,184,160,.45); }
+  .card.l2 .iblock { border-left-color: rgba(127,119,221,.45); }
+  .card.l3 .iblock { border-left-color: rgba(239,159,39,.5); }
+  .iblock::before {
+    content: '';
+    position: absolute;
+    left: -4px; top: 0;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--border-mid);
+  }
+  .card.l1 .iblock::before { background: var(--teal); }
+  .card.l2 .iblock::before { background: var(--purple); }
+  .card.l3 .iblock::before { background: var(--amber); }
   .iblock-title {
-    font-size: 13px;
-    font-weight: 700;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    font-variation-settings: 'opsz' 48;
     color: var(--text);
-    margin-bottom: .3rem;
+    margin-bottom: .4rem;
+    letter-spacing: -.01em;
+    line-height: 1.3;
   }
   .iblock-desc {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   /* Connector grid */
@@ -374,29 +425,30 @@
   }
 
   /* Choices */
-  .choices { display: flex; flex-direction: column; gap: 9px; margin-top: .25rem; }
+  .choices { display: flex; flex-direction: column; gap: 10px; margin-top: .75rem; }
   .choice {
     background: var(--bg);
-    border: 1.5px solid var(--border-mid);
-    border-radius: var(--radius-sm);
-    padding: .8rem 1rem;
-    font-size: 14px;
+    border: 1px solid rgba(10,22,40,.08);
+    border-radius: 10px;
+    padding: .95rem 1.1rem;
+    font-size: 14.5px;
     font-weight: 500;
     color: var(--text);
     cursor: pointer;
     text-align: left;
-    transition: all .15s;
+    transition: all .2s cubic-bezier(.4,0,.2,1);
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-family: 'DM Sans', sans-serif;
     width: 100%;
+    box-shadow: 0 1px 2px rgba(10,22,40,.03);
   }
   .choice:hover {
-    background: linear-gradient(135deg, rgba(206,0,88,0.04) 0%, rgba(255,181,132,0.04) 100%);
-    border-color: var(--rubine);
-    transform: translateX(2px);
-    box-shadow: 0 2px 8px rgba(206,0,88,.08);
+    background: linear-gradient(135deg, rgba(206,0,88,0.05) 0%, rgba(255,181,132,0.05) 100%);
+    border-color: rgba(206,0,88,.35);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(206,0,88,.12), 0 1px 3px rgba(10,22,40,.06);
   }
   .choice:hover .choice-arrow { color: var(--rubine); }
   .choice-arrow {
