@@ -231,12 +231,24 @@
     background: #fff;
     border-color: var(--border);
     transition: all .25s cubic-bezier(.4,0,.2,1);
-    opacity: .45;
+    opacity: .6;
     letter-spacing: .01em;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .lvl:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+    border-color: var(--rubine);
+    color: var(--rubine);
+    box-shadow: 0 3px 12px rgba(206,0,88,.18);
   }
   .lvl.l1 { border-color: var(--teal); background: linear-gradient(135deg, rgba(78,184,160,.12) 0%, rgba(78,184,160,.22) 100%); color: var(--teal-dark); opacity: 1; box-shadow: 0 2px 10px rgba(78,184,160,.2); }
   .lvl.l2 { border-color: var(--purple); background: linear-gradient(135deg, rgba(127,119,221,.12) 0%, rgba(127,119,221,.22) 100%); color: var(--purple-dark); opacity: 1; box-shadow: 0 2px 10px rgba(127,119,221,.2); }
   .lvl.l3 { border-color: var(--amber); background: linear-gradient(135deg, rgba(239,159,39,.12) 0%, rgba(239,159,39,.25) 100%); color: var(--amber-dark); opacity: 1; box-shadow: 0 2px 10px rgba(239,159,39,.22); }
+  .lvl.l1:hover { border-color: var(--teal-dark); color: var(--teal-dark); box-shadow: 0 4px 16px rgba(78,184,160,.35); }
+  .lvl.l2:hover { border-color: var(--purple-dark); color: var(--purple-dark); box-shadow: 0 4px 16px rgba(127,119,221,.35); }
+  .lvl.l3:hover { border-color: var(--amber-dark); color: var(--amber-dark); box-shadow: 0 4px 16px rgba(239,159,39,.4); }
 
   /* Card - editorial depth, warmer shadow, signature sunset accent */
   .card {
@@ -1074,10 +1086,11 @@ function render(sid) {
   const c = document.getElementById('scene-container');
   c.dataset.current = sid;
 
+  const LEVEL_INTRO = { 1: 'l1_habits', 2: 'l2_intro', 3: 'l3_intro' };
   const lvlBadges = [1, 2, 3].map(n => {
     const active = s.lvl === n;
     const cls = active ? `lvl l${n}` : 'lvl';
-    return `<span class="${cls}">${LEVEL_LABELS[n]}</span>`;
+    return `<button class="${cls}" onclick="go('${LEVEL_INTRO[n]}')">${LEVEL_LABELS[n]}</button>`;
   }).join('');
 
   const dots = SCENEKEYS.map(k => {
