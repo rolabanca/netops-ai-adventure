@@ -1126,6 +1126,7 @@ function render(sid) {
   ).join('');
 
   const back = history.length > 0 ? `<button class="nav-btn" onclick="goBack()">← back</button>` : '';
+  const restart = sid !== 'start' ? `<button class="nav-btn" onclick="restart()">↺ start over</button>` : '';
   const sharePanelHTML = sid === 'finish' ? buildSharePanel(currentLevel) : '';
 
   const sceneZiggy = s.lvl === 1 ? ZIGGY.l1 : s.lvl === 2 ? ZIGGY.l2 : s.lvl === 3 ? ZIGGY.l3 : null;
@@ -1151,7 +1152,7 @@ function render(sid) {
       <div class="choices">${ch}</div>
     </div>
     ${sharePanelHTML}
-    <div class="nav-row">${back}</div>`;
+    <div class="nav-row">${back}${restart}</div>`;
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -1165,6 +1166,14 @@ function go(sid) {
 function goBack() {
   const prev = history.pop();
   if (prev) render(prev);
+}
+
+function restart() {
+  history = [];
+  xp = 0;
+  visited.clear();
+  currentLevel = 1;
+  render('start');
 }
 
 document.getElementById('hero-ziggy').src = ZIGGY.hero;
