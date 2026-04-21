@@ -641,6 +641,63 @@
     font-weight: 500;
   }
 
+  /* Resource card (finish screen) */
+  .resource-card {
+    display: block;
+    background: linear-gradient(135deg, rgba(206,0,88,.12) 0%, rgba(127,119,221,.12) 50%, rgba(255,181,132,.10) 100%);
+    border: 1.5px solid rgba(228,19,122,.4);
+    border-radius: 14px;
+    padding: 1.25rem 1.4rem;
+    margin: 1.5rem 0 .5rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: all .25s cubic-bezier(.4,0,.2,1);
+    position: relative;
+    overflow: hidden;
+  }
+  .resource-card::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 140px; height: 140px;
+    background: radial-gradient(circle, rgba(228,19,122,.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .resource-card:hover {
+    border-color: var(--rubine);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(206,0,88,.25);
+  }
+  .resource-card-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--rubine);
+    margin-bottom: .4rem;
+  }
+  .resource-card-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    font-variation-settings: 'opsz' 72;
+    color: var(--text);
+    margin-bottom: .4rem;
+    letter-spacing: -.01em;
+  }
+  .resource-card-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: .6rem;
+  }
+  .resource-card-link {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--rubine);
+    letter-spacing: .02em;
+  }
+
   /* Footer */
   .footer {
     text-align: center;
@@ -662,6 +719,31 @@
     border-radius: 1px;
   }
   .footer strong { color: #fff; }
+  .footer-cta {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(228,19,122,.3);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(228,19,122,.08) 0%, rgba(127,119,221,.08) 100%);
+    backdrop-filter: blur(8px);
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+    color: rgba(255,255,255,.75);
+  }
+  .footer-cta a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .15s;
+  }
+  .footer-cta a:hover { color: var(--rubine-bright); }
+  .footer-cta-sub {
+    font-size: 11.5px;
+    color: rgba(255,255,255,.5);
+    margin-top: .35rem;
+  }
 </style>
 </head>
 <body>
@@ -676,7 +758,11 @@
   </div>
   <div id="scene-container"></div>
   <div class="footer">
-    <strong>NetOps AI Lab</strong> · Built by Romina Labanca · BetterUp Network Operations
+    <strong>NetOps AI Adventure</strong> · Built by Romina Labanca · BetterUp Network Operations
+    <div class="footer-cta">
+      Want a head start? <a href="https://claude.ai/project/019d451c-220e-7607-8d7c-ec92e6c58500" target="_blank" rel="noopener">Open the NetOps AI Lab →</a>
+      <div class="footer-cta-sub">A shared Claude project with NetOps context, prompts, and skills already built in.</div>
+    </div>
   </div>
 </div>
 
@@ -972,6 +1058,13 @@ const scenes = {
     tag: 'tg-navy', tagText: '🐶 ziggy says: nice work!',
     title: 'You finished the adventure.',
     body: 'Share what level you reached with the team. Every share helps build the collective - your insight might be exactly what a teammate needs to hear this week.',
+    customHTML: `
+      <a class="resource-card" href="https://claude.ai/project/019d451c-220e-7607-8d7c-ec92e6c58500" target="_blank" rel="noopener">
+        <div class="resource-card-eyebrow">🚀 keep going</div>
+        <div class="resource-card-title">Open the NetOps AI Lab</div>
+        <div class="resource-card-desc">A shared Claude project with NetOps context, prompts, and skills already built in. Bookmark it, then start using it in your week.</div>
+        <div class="resource-card-link">claude.ai/project →</div>
+      </a>`,
     choices: [
       { text: 'Play again from the beginning', next: 'start' }
     ]
