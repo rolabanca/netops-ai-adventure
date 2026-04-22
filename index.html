@@ -184,6 +184,7 @@
   }
   .card.l1 .scene-ziggy { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(78,184,160,.15), 0 6px 20px rgba(78,184,160,.25); }
   .card.l2 .scene-ziggy { border-color: var(--purple); box-shadow: 0 0 0 4px rgba(127,119,221,.15), 0 6px 20px rgba(127,119,221,.25); }
+  .card.pm .scene-ziggy { border-color: var(--peach); box-shadow: 0 0 0 4px rgba(255,181,132,.18), 0 6px 20px rgba(255,181,132,.3); }
   .card.l3 .scene-ziggy { border-color: var(--amber); box-shadow: 0 0 0 4px rgba(239,159,39,.15), 0 6px 20px rgba(239,159,39,.3); }
   .finish-ziggy {
     display: block;
@@ -284,6 +285,7 @@
   }
   .card.l1::after { background: linear-gradient(90deg, var(--teal) 0%, #7cd4bd 50%, var(--teal) 100%); }
   .card.l2::after { background: linear-gradient(90deg, var(--purple) 0%, #a59eee 50%, var(--purple) 100%); }
+  .card.pm::after { background: linear-gradient(90deg, var(--peach) 0%, #ffd1a8 50%, var(--peach) 100%); }
   .card.l3::after { background: linear-gradient(90deg, var(--amber) 0%, #ffc47a 50%, var(--amber) 100%); }
   .card::before {
     content: '';
@@ -344,6 +346,8 @@
   .tg-purple::before { background: var(--purple); }
   .tg-amber { color: var(--amber-dark); }
   .tg-amber::before { background: var(--amber); }
+  .tg-peach { color: #b56319; }
+  .tg-peach::before { background: var(--peach); }
   .tg-navy { color: var(--navy); }
   .tg-navy::before { background: var(--rubine); }
 
@@ -377,6 +381,7 @@
   }
   .card.l1 .scene-body::first-letter { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
   .card.l2 .scene-body::first-letter { background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .card.pm .scene-body::first-letter { background: linear-gradient(135deg, var(--peach) 0%, #b56319 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
   .card.l3 .scene-body::first-letter { background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 
   /* Outcome box - editorial callout */
@@ -390,6 +395,7 @@
   .obox.teal { background: linear-gradient(135deg, rgba(78,184,160,.10) 0%, rgba(78,184,160,.04) 100%); border-left-color: var(--teal); }
   .obox.purple { background: linear-gradient(135deg, rgba(127,119,221,.10) 0%, rgba(127,119,221,.04) 100%); border-left-color: var(--purple); }
   .obox.amber { background: linear-gradient(135deg, rgba(239,159,39,.12) 0%, rgba(239,159,39,.04) 100%); border-left-color: var(--amber); }
+  .obox.peach { background: linear-gradient(135deg, rgba(255,181,132,.14) 0%, rgba(255,181,132,.04) 100%); border-left-color: var(--peach); }
   .olabel {
     font-size: 10.5px;
     font-weight: 700;
@@ -400,6 +406,7 @@
   .obox.teal .olabel { color: var(--teal-dark); }
   .obox.purple .olabel { color: var(--purple-dark); }
   .obox.amber .olabel { color: var(--amber-dark); }
+  .obox.peach .olabel { color: #b56319; }
   .otext { font-size: 14px; line-height: 1.65; color: var(--text); }
   .nugget {
     font-size: 13px;
@@ -412,6 +419,7 @@
   .obox.teal .nugget { color: var(--teal-dark); }
   .obox.purple .nugget { color: var(--purple-dark); }
   .obox.amber .nugget { color: var(--amber-dark); }
+  .obox.peach .nugget { color: #b56319; }
 
   /* Inner blocks - editorial threaded steps, not form fields */
   .iblock {
@@ -425,6 +433,7 @@
   }
   .iblock + .iblock { margin-top: .1rem; }
   .card.l1 .iblock { border-left-color: rgba(78,184,160,.45); }
+  .card.pm .iblock { border-left-color: rgba(255,181,132,.55); }
   .card.l2 .iblock { border-left-color: rgba(127,119,221,.45); }
   .card.l3 .iblock { border-left-color: rgba(239,159,39,.5); }
   .iblock::before {
@@ -437,6 +446,7 @@
     box-shadow: 0 0 0 3px var(--bg), 0 2px 6px rgba(206,0,88,.2);
   }
   .card.l1 .iblock::before { background: radial-gradient(circle at 30% 30%, #7cd4bd 0%, var(--teal) 60%, var(--teal-dark) 100%); box-shadow: 0 0 0 3px var(--bg), 0 2px 6px rgba(78,184,160,.4); }
+  .card.pm .iblock::before { background: radial-gradient(circle at 30% 30%, #ffd1a8 0%, var(--peach) 60%, #d87a2a 100%); box-shadow: 0 0 0 3px var(--bg), 0 2px 6px rgba(255,181,132,.5); }
   .card.l2 .iblock::before { background: radial-gradient(circle at 30% 30%, #a59eee 0%, var(--purple) 60%, var(--purple-dark) 100%); box-shadow: 0 0 0 3px var(--bg), 0 2px 6px rgba(127,119,221,.4); }
   .card.l3 .iblock::before { background: radial-gradient(circle at 30% 30%, #ffc47a 0%, var(--amber) 60%, var(--amber-dark) 100%); box-shadow: 0 0 0 3px var(--bg), 0 2px 6px rgba(239,159,39,.4); }
   .iblock-title {
@@ -641,6 +651,289 @@
     font-weight: 500;
   }
 
+  /* Process Mapping — tab strip */
+  .pm-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: -.25rem 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,181,132,.25);
+  }
+  .pm-tab {
+    padding: 6px 11px;
+    font-size: 11.5px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all .2s;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: .01em;
+  }
+  .pm-tab:hover { color: #b56319; background: rgba(255,181,132,.10); }
+  .pm-tab.active {
+    background: linear-gradient(135deg, rgba(255,181,132,.22) 0%, rgba(239,159,39,.18) 100%);
+    color: #b56319;
+    border-color: rgba(255,181,132,.5);
+    box-shadow: 0 2px 10px rgba(255,181,132,.25);
+  }
+
+  /* Process Mapping — checklist with localStorage persistence */
+  .pm-checklist { display: flex; flex-direction: column; gap: 6px; margin: .25rem 0; }
+  .pm-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: .55rem .85rem;
+    background: var(--bg);
+    border: 1px solid rgba(10,22,40,.08);
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--text);
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .pm-check:hover { border-color: var(--peach); background: rgba(255,181,132,.06); }
+  .pm-check input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--border-mid);
+    border-radius: 5px;
+    background: var(--bg);
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    transition: all .15s;
+  }
+  .pm-check input[type="checkbox"]:hover { border-color: var(--peach); }
+  .pm-check input[type="checkbox"]:checked {
+    background: linear-gradient(135deg, var(--peach) 0%, #d87a2a 100%);
+    border-color: #d87a2a;
+  }
+  .pm-check input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .pm-check-hint { font-size: 12px; color: var(--text-muted); margin: .25rem 0 .5rem; font-style: italic; }
+
+  /* Process Mapping — expandable symbol cards */
+  .pm-expand {
+    background: var(--bg);
+    border: 1px solid rgba(10,22,40,.08);
+    border-radius: 10px;
+    margin: .5rem 0;
+    overflow: hidden;
+  }
+  .pm-expand summary {
+    padding: .8rem 1rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    transition: background .15s;
+  }
+  .pm-expand summary::-webkit-details-marker { display: none; }
+  .pm-expand summary::after {
+    content: '+';
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--peach);
+    transition: transform .2s;
+  }
+  .pm-expand[open] summary::after { transform: rotate(45deg); }
+  .pm-expand summary:hover { background: rgba(255,181,132,.06); }
+  .pm-expand[open] summary { border-bottom: 1px solid rgba(255,181,132,.2); }
+  .pm-symbol-icon {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--peach);
+    line-height: 1;
+  }
+  .pm-symbol-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .pm-symbol-hint { color: var(--text-muted); font-size: 13px; font-style: italic; }
+  .pm-expand-body {
+    padding: .9rem 1rem 1.1rem;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+  .pm-expand-body ul { margin: .4rem 0 0 1.1rem; padding: 0; }
+  .pm-expand-body li { margin-bottom: .3rem; }
+
+  /* Process Mapping — flowchart */
+  .pm-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 1rem 0;
+    padding: 1.25rem .75rem;
+    background: linear-gradient(135deg, rgba(255,181,132,.06) 0%, rgba(239,159,39,.04) 100%);
+    border: 1px solid rgba(255,181,132,.2);
+    border-radius: 12px;
+  }
+  .pm-node {
+    padding: .55rem 1rem;
+    min-width: 240px;
+    max-width: 340px;
+    text-align: center;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text);
+    background: var(--bg);
+    border: 1.5px solid var(--peach);
+    position: relative;
+  }
+  .pm-node.pm-rect { border-radius: 6px; }
+  .pm-node.pm-diamond {
+    border-radius: 2px;
+    transform: rotate(45deg);
+    padding: 1.1rem;
+    width: 200px;
+    height: 96px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: var(--amber);
+    background: linear-gradient(135deg, rgba(239,159,39,.08) 0%, var(--bg) 100%);
+  }
+  .pm-node.pm-diamond > span { transform: rotate(-45deg); display: block; font-weight: 600; font-size: 13px; }
+  .pm-node.pm-folder {
+    border-radius: 0 8px 8px 8px;
+    background: linear-gradient(135deg, rgba(127,119,221,.08) 0%, var(--bg) 100%);
+    border-color: var(--purple);
+    font-weight: 600;
+  }
+  .pm-node.pm-folder::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    width: 60px;
+    height: 10px;
+    background: var(--bg);
+    border: 1.5px solid var(--purple);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+  }
+  .pm-arrow {
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1;
+    opacity: .6;
+  }
+  .pm-branch-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: .25rem 0 .5rem;
+    text-align: center;
+    max-width: 360px;
+  }
+
+  /* Process Mapping — scope / lanes table */
+  .pm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: .75rem 0;
+    font-size: 13.5px;
+    background: var(--bg);
+    border: 1px solid rgba(10,22,40,.08);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .pm-table th, .pm-table td {
+    padding: .7rem .9rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(10,22,40,.06);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+  .pm-table thead th {
+    background: linear-gradient(135deg, rgba(255,181,132,.15) 0%, rgba(239,159,39,.10) 100%);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #b56319;
+  }
+  .pm-table tbody tr:last-child td { border-bottom: none; }
+  .pm-table tbody td:first-child { font-weight: 600; color: var(--text); }
+  .pm-table td em { color: var(--text-muted); font-style: normal; font-size: 12.5px; }
+
+  /* Process Mapping — three-path cards on Take Action */
+  .pm-paths {
+    display: grid;
+    gap: 10px;
+    margin: 1rem 0 .25rem;
+  }
+  .pm-path {
+    padding: 1rem 1.15rem;
+    background: var(--bg);
+    border: 1px solid rgba(10,22,40,.08);
+    border-left: 3px solid var(--peach);
+    border-radius: 0 10px 10px 0;
+  }
+  .pm-path.pm-path-automate { border-left-color: var(--purple); }
+  .pm-path.pm-path-systemize { border-left-color: var(--amber); }
+  .pm-path.pm-path-delegate { border-left-color: var(--teal); }
+  .pm-path-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: .35rem;
+  }
+  .pm-path.pm-path-automate .pm-path-label { color: var(--purple-dark); }
+  .pm-path.pm-path-systemize .pm-path-label { color: var(--amber-dark); }
+  .pm-path.pm-path-delegate .pm-path-label { color: var(--teal-dark); }
+  .pm-path-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: .35rem;
+    letter-spacing: -.01em;
+  }
+  .pm-path-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+
+  /* Process Mapping — worksheet-style prompts */
+  .pm-worksheet {
+    padding: 1rem 1.2rem;
+    background: rgba(255,181,132,.05);
+    border: 1px dashed rgba(255,181,132,.4);
+    border-radius: 10px;
+    margin: .75rem 0;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+  .pm-worksheet strong { color: #b56319; }
+  .pm-worksheet em { color: var(--text-muted); font-style: italic; }
+
   /* Resource card (finish screen) */
   .resource-card {
     display: block;
@@ -785,24 +1078,27 @@ const ZIGGY = {
   party: 'data:image/jpeg;base64,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',
 };
 
-const SCENEKEYS = ['start','l1_habits','l1_what_is_prompt','l1_prompt_examples','l1_example','l1_ready','l2_intro','l2_examples','l2_howto','l2_connectors','l2_ready','l3_intro','l3_example','l3_build','l3_ready','finish'];
+const SCENEKEYS = ['start','l1_habits','l1_what_is_prompt','l1_prompt_examples','l1_example','l1_ready','l2_intro','l2_examples','l2_howto','l2_connectors','l2_ready','pm_intro','pm_identify','pm_scope','pm_symbols','pm_map','pm_lanes','pm_action','l3_intro','l3_example','l3_build','l3_ready','finish'];
 
 const LEVEL_LABELS = {
   1: 'Level 1 - Use AI',
   2: 'Level 2 - Connect tools',
-  3: 'Level 3 - Command center'
+  3: 'Level 3 - Process map',
+  4: 'Level 4 - Command center'
 };
 
 const LEVEL_SHARE_PUBLIC = {
   1: 'I just completed the NetOps AI Adventure - Level 1: Using AI. 🐶\n\nMy takeaway: the best time to use Claude or Gemini is on the small, annoying tasks I keep putting off. Starting this week I\'m trying it on one thing I\'d normally do manually.\n\nAnyone else on a similar level? Drop your takeaway below 👇',
   2: 'I just completed the NetOps AI Adventure - Level 2: Connecting Tools. 🐶\n\nMy takeaway: my tools don\'t need to stay siloed. Setting up one automation this week - Gmail, Sheets, or Slack - to cut out manual copy-pasting.\n\nWhat\'s one repetitive task you\'d automate if you could?',
-  3: 'I just completed the NetOps AI Adventure - Level 3: Command Center. 🐶\n\nMy takeaway: building a personal command center starts with one doc. Writing my context file this week so Claude knows my priorities and workflows.\n\nWho else is building something? Let\'s share 👇'
+  3: 'I just completed the NetOps AI Adventure - Level 3: Process Mapping. 🐶\n\nI mapped my [process name] and found [one insight]. Biggest surprise: [what I didn\'t expect]. Next step: [what I\'ll automate or hand off].\n\nWho else maps their work before they automate? Drop yours 👇',
+  4: 'I just completed the NetOps AI Adventure - Level 4: Command Center. 🐶\n\nMy takeaway: building a personal command center starts with one doc. Writing my context file this week so Claude knows my priorities and workflows.\n\nWho else is building something? Let\'s share 👇'
 };
 
 const LEVEL_SHARE_ANON = {
   1: 'Hey Ziggy - just finished the NetOps AI Adventure, Level 1: Using AI. 🐶\n\nMy takeaway: the best time to reach for Claude or Gemini is on the small, annoying tasks I keep putting off. This week I\'m trying it on one thing I\'d normally do manually.',
   2: 'Hey Ziggy - just finished the NetOps AI Adventure, Level 2: Connecting Tools. 🐶\n\nMy takeaway: my tools don\'t need to stay siloed. Setting up one automation this week - Gmail, Sheets, or Slack - to cut out the manual copy-pasting.',
-  3: 'Hey Ziggy - just finished the NetOps AI Adventure, Level 3: Command Center. 🐶\n\nMy takeaway: building a personal command center starts with one doc. Writing my context file this week so Claude knows my priorities and workflows.'
+  3: 'Hey Ziggy - just finished the NetOps AI Adventure, Level 3: Process Mapping. 🐶\n\nI mapped my [process name] and found [one insight]. Biggest surprise: [what I didn\'t expect]. Next step: [what I\'ll automate or hand off].',
+  4: 'Hey Ziggy - just finished the NetOps AI Adventure, Level 4: Command Center. 🐶\n\nMy takeaway: building a personal command center starts with one doc. Writing my context file this week so Claude knows my priorities and workflows.'
 };
 
 let shareMode = 'public';
@@ -877,7 +1173,7 @@ const scenes = {
       nugget: 'The best automation is the one you actually set up this week. Both paths take under 15 minutes - less time than the meeting you\'d normally spend talking about automating something. Ziggy has done the math.' },
     choices: [
       { text: 'How do I actually set one up?', next: 'l2_howto' },
-      { text: 'I want something that runs itself - show me Level 3', next: 'l3_intro' }
+      { text: 'I want something that runs itself - skip to Level 4', next: 'l3_intro' }
     ]
   },
   l2_howto: {
@@ -915,13 +1211,294 @@ const scenes = {
       nugget: 'Connectors = Claude reaches into your tools on demand. Zapier = rules run in the background. You\'ll use both eventually - but start with Connectors this week. Two minutes to enable, immediate value.' },
     choices: [
       { text: 'Now show me Zapier (for automatic rules)', next: 'l2_ready' },
-      { text: 'Show me Level 3 - command center', next: 'l3_intro' },
+      { text: 'Level 3 - map a process before I automate', next: 'pm_intro' },
+      { text: 'Show me Level 4 - command center', next: 'l3_intro' },
       { text: 'Share my level', next: 'finish' }
     ]
   },
+  pm_intro: {
+    lvl: 3, cardClass: 'pm',
+    tag: 'tg-peach', tagText: 'level 3 - process mapping',
+    title: 'See the workflow before you automate it.',
+    empathy: '<strong>You can\'t automate what you can\'t see.</strong> Most NetOps work lives half in your head, half in Slack, half across four browser tabs. Before you hand any of it to AI, you have to draw the actual shape.',
+    body: 'Process mapping is the missing skill between "I can prompt" and "I can automate." Six steps, 20 minutes, pays back for months. Use the tabs above to jump around, or go in order - your checkbox progress saves automatically.',
+    outcome: { type: 'peach', label: 'The six moves, in order',
+      text: '1. Identify - pick the process that hurts most.\n2. Scope - define where it starts and where it ends.\n3. Symbols - learn the four shapes you need (spoiler: only four).\n4. Map it - walk a real NetOps flow end-to-end.\n5. Swim lanes - see who, what, when, how much, and how people feel about it.\n6. Take action - automate, systemize, or delegate what you mapped.',
+      nugget: 'Ziggy has never seen anyone regret mapping a process. Only regret not doing it sooner.' },
+    choices: [
+      { text: 'Start with Identify →', next: 'pm_identify' },
+      { text: 'I\'ve mapped before - jump to Map It', next: 'pm_map' }
+    ]
+  },
+  pm_identify: {
+    lvl: 3, cardClass: 'pm',
+    tag: 'tg-peach', tagText: 'level 3 - identify',
+    title: 'Pick the process that hurts most.',
+    empathy: '<strong>Not the easy one. Not the small one.</strong> The one that eats your Friday afternoons or keeps you up Sunday nights. The right process to map is the one that pays back the most when you finally see it.',
+    body: 'Which of these NetOps workflows have you touched in the last month? Check every box that applies. Your answers save automatically - come back later and they\'ll still be here.',
+    customHTML: `
+      <div class="pm-check-hint">Check all that apply:</div>
+      <div class="pm-checklist">
+        <label class="pm-check"><input type="checkbox" data-pm-key="coach_pool" onchange="savePmCheck(this)"><span>Coach pool construction / matching (Fountain + Looker + bios lookup)</span></label>
+        <label class="pm-check"><input type="checkbox" data-pm-key="renewal_retro" onchange="savePmCheck(this)"><span>Renewal retro prep (data scattered across Coda, Slack, Sheets)</span></label>
+        <label class="pm-check"><input type="checkbox" data-pm-key="kickoff_intake" onchange="savePmCheck(this)"><span>Kickoff intake and routing (multiple channels, inconsistent handoff)</span></label>
+        <label class="pm-check"><input type="checkbox" data-pm-key="escalation_triage" onchange="savePmCheck(this)"><span>Escalation triage (who decides, who pages whom, who owns it)</span></label>
+        <label class="pm-check"><input type="checkbox" data-pm-key="frcs_tracking" onchange="savePmCheck(this)"><span>FRCS completion tracking across the cohort</span></label>
+        <label class="pm-check"><input type="checkbox" data-pm-key="debrief_scheduling" onchange="savePmCheck(this)"><span>Debrief session scheduling and follow-up</span></label>
+        <label class="pm-check"><input type="checkbox" data-pm-key="launch_followup" onchange="savePmCheck(this)"><span>Launch confirmation follow-up and data pulls</span></label>
+        <label class="pm-check"><input type="checkbox" data-pm-key="pay_disputes" onchange="savePmCheck(this)"><span>Pay rate disputes or coach earnings questions</span></label>
+        <label class="pm-check"><input type="checkbox" data-pm-key="coach_onboarding" onchange="savePmCheck(this)"><span>New coach onboarding into our systems</span></label>
+        <label class="pm-check"><input type="checkbox" data-pm-key="exec_prep" onchange="savePmCheck(this)"><span>Executive Suite session prep / partner briefings</span></label>
+        <label class="pm-check"><input type="checkbox" data-pm-key="other" onchange="savePmCheck(this)"><span>Something else I do often that isn\'t on this list</span></label>
+      </div>`,
+    outcome: { type: 'peach', label: 'Now pick your one',
+      text: 'Look at your checked list. The process you map should (a) hurt noticeably, (b) repeat predictably, and (c) have steps a human could describe if pressed. If three qualify, pick the one most teammates would recognize without explanation.',
+      nugget: 'You\'re not picking the hardest or easiest. You\'re picking the one that, if mapped, would let you stop explaining it over and over in Slack.' },
+    choices: [
+      { text: 'I picked one - show me Scope', next: 'pm_scope' },
+      { text: 'Back to overview', next: 'pm_intro' }
+    ]
+  },
+  pm_scope: {
+    lvl: 3, cardClass: 'pm',
+    tag: 'tg-peach', tagText: 'level 3 - scope',
+    title: 'Define where it starts. Define where it ends.',
+    empathy: '<strong>Most mapped processes fail because the edges are fuzzy.</strong> Without a crisp trigger and a crisp finish line, you end up drawing everything, forever. Scope is the guardrail that makes the map actually finishable.',
+    body: 'Every process has a start (the event that triggers it) and an end (the moment it\'s clearly done). Here are three NetOps processes fully scoped. Use them as a pattern for yours.',
+    customHTML: `
+      <table class="pm-table">
+        <thead>
+          <tr><th>Process</th><th>Starts when</th><th>Ends when</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Coach Pool Construction</td>
+            <td>Launch is confirmed in the CRM</td>
+            <td>Shortlist delivered to CSM with match rationale</td>
+          </tr>
+          <tr>
+            <td>Renewal Retro Prep</td>
+            <td>60 days before renewal date</td>
+            <td>Retro deck delivered + stakeholder invite sent</td>
+          </tr>
+          <tr>
+            <td>Kickoff Intake Request</td>
+            <td>Form submitted or Slack ping received</td>
+            <td>Kickoff scheduled + calendar invite sent</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pm-worksheet">
+        <strong>Now draft yours.</strong><br>
+        My process: <em>[the one you picked in Identify]</em><br>
+        Starts when: <em>[the specific trigger event]</em><br>
+        Ends when: <em>[the specific moment it\'s clearly done]</em>
+      </div>`,
+    outcome: { type: 'peach', label: 'Reality check',
+      text: 'Read your scope out loud. If either end feels handwavy - "eh, it ends when done" - go back and tighten. A crisp trigger and a crisp finish are the difference between a map that ships and a map that sprawls.',
+      nugget: 'Good scope passes the Slack test: if you Slacked a teammate "I\'m mapping X - starts when [trigger], ends when [finish]," they\'d nod without asking for more.' },
+    choices: [
+      { text: 'Got it - show me the symbols', next: 'pm_symbols' },
+      { text: 'Back to Identify', next: 'pm_identify' }
+    ]
+  },
+  pm_symbols: {
+    lvl: 3, cardClass: 'pm',
+    tag: 'tg-peach', tagText: 'level 3 - symbols',
+    title: 'Four shapes. That\'s the whole vocabulary.',
+    empathy: '<strong>Process mapping looks technical because of the diagrams.</strong> It isn\'t. There are exactly four shapes you need, and every NetOps workflow fits in this vocabulary. Learn them once, use them forever.',
+    body: 'Click any symbol to see real NetOps examples. Once these four feel obvious, everything else is just arranging them in order.',
+    customHTML: `
+      <details class="pm-expand">
+        <summary>
+          <span class="pm-symbol-icon">▭</span>
+          <div>
+            <div class="pm-symbol-title">Rectangle</div>
+            <div class="pm-symbol-hint">a step you do</div>
+          </div>
+        </summary>
+        <div class="pm-expand-body">
+          Each rectangle is one discrete action. If you find yourself writing "and then..." inside a rectangle, split it into two.
+          <ul>
+            <li>"Pull coach list from Fountain"</li>
+            <li>"Draft retro deck in Slides"</li>
+            <li>"Send confirmation Slack to the cohort"</li>
+            <li>"Update CRM match notes"</li>
+          </ul>
+        </div>
+      </details>
+      <details class="pm-expand">
+        <summary>
+          <span class="pm-symbol-icon">◇</span>
+          <div>
+            <div class="pm-symbol-title">Diamond</div>
+            <div class="pm-symbol-hint">a yes/no decision</div>
+          </div>
+        </summary>
+        <div class="pm-expand-body">
+          Every diamond has exactly two exit arrows (yes/no). If a decision has three or more outcomes, chain diamonds together - don\'t invent new shapes.
+          <ul>
+            <li>"Is the pool French-speaking?"</li>
+            <li>"Is launch confirmed in CRM?"</li>
+            <li>"Within 60 days of renewal?"</li>
+            <li>"Does the coach have ICF certification?"</li>
+          </ul>
+        </div>
+      </details>
+      <details class="pm-expand">
+        <summary>
+          <span class="pm-symbol-icon">▤</span>
+          <div>
+            <div class="pm-symbol-title">Folder</div>
+            <div class="pm-symbol-hint">an input or output - data, file, or message</div>
+          </div>
+        </summary>
+        <div class="pm-expand-body">
+          A folder represents something entering or leaving the process - not an action you perform on it.
+          <ul>
+            <li>"Coach metadata from Looker" (input)</li>
+            <li>"Retro deck in Google Slides" (output)</li>
+            <li>"Email from CSM with renewal details" (input)</li>
+            <li>"Shortlist delivered to CSM" (output)</li>
+          </ul>
+        </div>
+      </details>
+      <details class="pm-expand">
+        <summary>
+          <span class="pm-symbol-icon">→</span>
+          <div>
+            <div class="pm-symbol-title">Arrow</div>
+            <div class="pm-symbol-hint">which way the process flows</div>
+          </div>
+        </summary>
+        <div class="pm-expand-body">
+          Arrows connect everything. They\'re not cosmetic - their direction is the map\'s grammar. A backward arrow is a loop. A missing arrow is a missing step.
+          <ul>
+            <li>From "Pull criteria" → "Query Fountain"</li>
+            <li>From diamond "Enough matches?" → yes-arrow to "Pull bios"</li>
+            <li>From diamond "Enough matches?" → no-arrow back to "Expand criteria" (loop)</li>
+          </ul>
+        </div>
+      </details>`,
+    outcome: { type: 'peach', label: 'The rule',
+      text: 'Rectangle for doing. Diamond for deciding. Folder for stuff (coming in or going out). Arrow for flow. That\'s it. If you find yourself wanting a fifth shape, you\'re over-engineering - simplify first.',
+      nugget: 'Every NetOps workflow you\'ll ever map lives in these four shapes. Ziggy has checked.' },
+    choices: [
+      { text: 'Walk me through a real flow', next: 'pm_map' },
+      { text: 'Back to Scope', next: 'pm_scope' }
+    ]
+  },
+  pm_map: {
+    lvl: 3, cardClass: 'pm',
+    tag: 'tg-peach', tagText: 'level 3 - map it',
+    title: 'Walk through a real Coach Pool Request.',
+    empathy: '<strong>Here\'s what a mapped process actually looks like.</strong> Simplified but realistic. Watch how rectangles, diamonds, folders, and arrows slot together to show the whole shape.',
+    body: 'Below: a simplified Coach Pool Construction flow end-to-end. Every shape you just learned, in sequence.',
+    customHTML: `
+      <div class="pm-flow">
+        <div class="pm-node pm-folder">Launch confirmed in CRM</div>
+        <div class="pm-arrow">↓</div>
+        <div class="pm-node pm-rect">Pull matching criteria from CRM</div>
+        <div class="pm-arrow">↓</div>
+        <div class="pm-node pm-rect">Query Fountain for matches</div>
+        <div class="pm-arrow">↓</div>
+        <div class="pm-node pm-diamond"><span>Enough matches?</span></div>
+        <div class="pm-branch-note">No → expand search criteria, loop back to Query Fountain. Yes → continue.</div>
+        <div class="pm-node pm-rect">Pull bios + quality metrics from Looker</div>
+        <div class="pm-arrow">↓</div>
+        <div class="pm-node pm-rect">Compile shortlist with match rationale</div>
+        <div class="pm-arrow">↓</div>
+        <div class="pm-node pm-folder">Shortlist delivered to CSM</div>
+      </div>
+      <div class="pm-worksheet">
+        <strong>Now you.</strong> Take your process from Identify. Write out the steps in order, using the four shapes. Don\'t worry about making it pretty - a napkin beats a blank page. Lucid, FigJam, or the back of a notebook all work.
+      </div>`,
+    outcome: { type: 'peach', label: 'Ship the ugly version',
+      text: 'First map is always ugly. That\'s normal. The point isn\'t the picture - it\'s seeing patterns on paper you couldn\'t see in your head. Tighten later, or don\'t. Ship the ugly version and invite edits from teammates who touch the same process.',
+      nugget: 'The minute you draw it, people start saying "oh that\'s what I\'ve been doing differently." That conversation alone is worth the 20 minutes.' },
+    choices: [
+      { text: 'Show me swim lanes', next: 'pm_lanes' },
+      { text: 'Back to Symbols', next: 'pm_symbols' }
+    ]
+  },
+  pm_lanes: {
+    lvl: 3, cardClass: 'pm',
+    tag: 'tg-peach', tagText: 'level 3 - swim lanes',
+    title: 'The map is one layer. Five more are hiding underneath.',
+    empathy: '<strong>A flat map tells you the steps. Swim lanes tell you what it costs.</strong> Who\'s involved, which tools, how long, how much, and how people feel about it. Each layer surfaces a different kind of insight about where to intervene.',
+    body: 'Same Coach Pool flow, five different lenses. Look through each one - something different shows up every time.',
+    customHTML: `
+      <table class="pm-table">
+        <thead>
+          <tr><th>Layer</th><th>What shows up in the Coach Pool flow</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>People</td>
+            <td>NetOps operator, CSM, coaches, the users, Workday admin <em>(anyone downstream who touches the output)</em></td>
+          </tr>
+          <tr>
+            <td>Software</td>
+            <td>Fountain, Looker, CRM, Slack, Google Sheets, email <em>(every tab you had open doing it manually)</em></td>
+          </tr>
+          <tr>
+            <td>Time</td>
+            <td>2-4 hours per pool, 3-5 pools/week = ~10-20 hours/week <em>(at the NetOps team level)</em></td>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td>NetOps hourly × time × frequency <em>(the real cost is opportunity cost - what else that time would do)</em></td>
+          </tr>
+          <tr>
+            <td>Emotions</td>
+            <td>Frustration at duplicate data pulls. Anxiety about missing criteria. Fatigue at repetition. <em>(The "I hate this step" signal is data.)</em></td>
+          </tr>
+        </tbody>
+      </table>`,
+    outcome: { type: 'peach', label: 'Where to look first',
+      text: 'Software layer shows where tools multiply. Time layer shows where hours vanish. Emotions layer is the one most people skip - and it\'s where the real damage hides. The place a teammate mutters "I hate this" is often the place most worth fixing, and it rarely matches the place that looks most broken on the steps layer.',
+      nugget: 'Time + Emotions is the pair worth watching. A 30-minute step that stresses someone out costs more than a 2-hour step they don\'t mind doing.' },
+    choices: [
+      { text: 'What do I do with the map now?', next: 'pm_action' },
+      { text: 'Back to Map It', next: 'pm_map' }
+    ]
+  },
+  pm_action: {
+    lvl: 3, cardClass: 'pm',
+    tag: 'tg-peach', tagText: 'level 3 - take action',
+    title: 'You have a map. Three things can happen with it.',
+    empathy: '<strong>The point of the map isn\'t the map.</strong> It\'s what becomes possible once you can see the workflow clearly. Three paths forward - and every step you drew is a candidate for one of them.',
+    body: 'Read each lens, then look at your map through that filter. Most steps fit into one of these three categories, and naming which is which is often the biggest insight of the whole exercise.',
+    customHTML: `
+      <div class="pm-paths">
+        <div class="pm-path pm-path-automate">
+          <div class="pm-path-label">Path 1 - Automate</div>
+          <div class="pm-path-title">Which steps can Claude or Zapier absorb?</div>
+          <div class="pm-path-desc">Rectangles that are really "pull X from Y" are often Claude-Connector moves. Repeatable rectangles that fire predictably are Zapier territory. Some decisions (diamonds) can even become Claude-powered rules. Head to Level 2, pick one step, and absorb it this week.</div>
+        </div>
+        <div class="pm-path pm-path-systemize">
+          <div class="pm-path-label">Path 2 - Systemize</div>
+          <div class="pm-path-title">Which steps belong in a command center?</div>
+          <div class="pm-path-desc">Steps you keep saying "Claude, read X and tell me Y" become saved prompts inside a Claude Project. Morning briefing material. Recurring reads. Level 4 is where repeated asks become one button.</div>
+        </div>
+        <div class="pm-path pm-path-delegate">
+          <div class="pm-path-label">Path 3 - Delegate</div>
+          <div class="pm-path-title">Which steps are actually someone else\'s job?</div>
+          <div class="pm-path-desc">Mapping exposes implicit ownership drift - the work you\'ve been quietly absorbing that actually belongs to another role. Name the owner. Hand it off. This is usually the single biggest time-saver in the whole exercise, and it doesn\'t require any AI.</div>
+        </div>
+      </div>`,
+    outcome: { type: 'peach', label: 'Ship what you mapped',
+      text: 'Most NetOps processes have been "I just do it" knowledge until someone names the shape. Your map is team-usable now. Drop it in #netops-ai-pulse as a photo, Lucid link, or napkin scan - plus your one biggest surprise. That\'s how this compounds across the team.',
+      nugget: 'First person to map a process gets authorship. Don\'t wait for permission - ship the ugly version, invite edits. Ziggy will be watching.' },
+    choices: [
+      { text: 'Go to Level 2 - pick what to automate', next: 'l2_intro' },
+      { text: 'Go to Level 4 - build the command center', next: 'l3_intro' },
+      { text: 'Share what I mapped', next: 'finish' }
+    ]
+  },
   l3_intro: {
-    lvl: 3, cardClass: 'l3',
-    tag: 'tg-amber', tagText: 'level 3 - command center',
+    lvl: 4, cardClass: 'l3',
+    tag: 'tg-amber', tagText: 'level 4 - command center',
     title: 'What if your AI knew your priorities, your tools, and your workflow?',
     empathy: '<strong>"Command center" sounds big. Your first one isn\'t.</strong> It starts with a doc and one automation. Everything else grows from there - you don\'t need to see the whole staircase to take the first step. Ziggy has never seen one of these built from a master plan. They all got built one small Tuesday move at a time.',
     body: 'A command center isn\'t a dashboard you check - it\'s a system that works while you\'re doing other things. It monitors what matters and surfaces only what needs your attention.',
@@ -931,8 +1508,8 @@ const scenes = {
     ]
   },
   l3_example: {
-    lvl: 3, cardClass: 'l3',
-    tag: 'tg-amber', tagText: 'level 3 - example',
+    lvl: 4, cardClass: 'l3',
+    tag: 'tg-amber', tagText: 'level 4 - example',
     title: 'A command center built around your actual NetOps work.',
     body: 'Here\'s what a real setup could look like - built on tools you already have access to.',
     customHTML: `
@@ -949,8 +1526,8 @@ const scenes = {
     ]
   },
   l3_build: {
-    lvl: 3, cardClass: 'l3',
-    tag: 'tg-amber', tagText: 'level 3 - build it',
+    lvl: 4, cardClass: 'l3',
+    tag: 'tg-amber', tagText: 'level 4 - build it',
     title: 'Build your command center in four steps.',
     body: 'Each step takes 30–60 minutes and gives you something useful immediately.',
     customHTML: `
@@ -1040,13 +1617,14 @@ const scenes = {
       text: 'Paste this into Claude or Gemini:\n\n"I\'m setting up a Zapier Zap that [what you want it to do]. I\'m stuck at [the step]. The screen shows [what you see]. Walk me through the exact next click like I\'ve never used Zapier."\n\nClaude knows Zapier\'s UI well and will give you button names, not theory. If you hit an error, paste it verbatim - "what does this mean and how do I fix it?"',
       nugget: 'Nobody sets up their first Zap without at least one confusing moment. You will, and you\'ll get past it. Ten minutes of confusion saves you hours every week.' },
     choices: [
-      { text: 'Show me Level 3 - command center', next: 'l3_intro' },
+      { text: 'Level 3 - map a process before I automate', next: 'pm_intro' },
+      { text: 'Show me Level 4 - command center', next: 'l3_intro' },
       { text: 'Share my level', next: 'finish' }
     ]
   },
   l3_ready: {
-    lvl: 3, cardClass: 'l3',
-    tag: 'tg-amber', tagText: 'level 3 - your build list',
+    lvl: 4, cardClass: 'l3',
+    tag: 'tg-amber', tagText: 'level 4 - your build list',
     title: 'Your command center, week by week.',
     empathy: '<strong>"Command center" sounds technical. This build isn\'t.</strong> You\'ll write one doc, click through a few menus, and paste code Claude writes for you. No engineering background required. Ziggy has walked plenty of non-technical folks through this exact path - we\'ll show you exactly what to click and give you a fallback for every step.',
     body: 'Four weeks. One move per week. Pace matters - this is compounding, not sprinting.',
@@ -1064,7 +1642,7 @@ const scenes = {
     ]
   },
   finish: {
-    lvl: 3, cardClass: 'l3',
+    lvl: 4, cardClass: 'l3',
     tag: 'tg-navy', tagText: '🐶 ziggy says: nice work!',
     title: 'You finished the adventure.',
     body: 'Share what level you reached with the team. Every share helps build the collective - your insight might be exactly what a teammate needs to hear this week.',
@@ -1201,8 +1779,8 @@ function render(sid) {
   const c = document.getElementById('scene-container');
   c.dataset.current = sid;
 
-  const LEVEL_INTRO = { 1: 'l1_habits', 2: 'l2_intro', 3: 'l3_intro' };
-  const lvlBadges = [1, 2, 3].map(n => {
+  const LEVEL_INTRO = { 1: 'l1_habits', 2: 'l2_intro', 3: 'pm_intro', 4: 'l3_intro' };
+  const lvlBadges = [1, 2, 3, 4].map(n => {
     const active = s.lvl === n;
     const cls = active ? `lvl l${n}` : 'lvl';
     return `<button class="${cls}" onclick="go('${LEVEL_INTRO[n]}')">${LEVEL_LABELS[n]}</button>`;
@@ -1232,7 +1810,7 @@ function render(sid) {
   const restart = sid !== 'start' ? `<button class="nav-btn" onclick="restart()">↺ start over</button>` : '';
   const sharePanelHTML = sid === 'finish' ? buildSharePanel(currentLevel) : '';
 
-  const sceneZiggy = s.lvl === 1 ? ZIGGY.l1 : s.lvl === 2 ? ZIGGY.l2 : s.lvl === 3 ? ZIGGY.l3 : null;
+  const sceneZiggy = s.cardClass === 'l1' ? ZIGGY.l1 : s.cardClass === 'l2' ? ZIGGY.l2 : s.cardClass === 'pm' ? ZIGGY.l2 : s.cardClass === 'l3' ? ZIGGY.l3 : null;
   const sceneZiggyHTML = sceneZiggy && sid !== 'finish' ? `<img class="scene-ziggy" src="${sceneZiggy}" alt="Ziggy">` : '';
   const finishZiggyHTML = sid === 'finish' ? `<img class="finish-ziggy" src="${ZIGGY.party}" alt="Ziggy celebrating">` : '';
 
@@ -1247,6 +1825,7 @@ function render(sid) {
       ${sceneZiggyHTML}
       <span class="tag ${s.tag}">${s.tagText}</span>
       ${finishZiggyHTML}
+      ${s.cardClass === 'pm' ? buildPmTabs(sid) : ''}
       <div class="scene-title">${s.title}</div>
       <div class="scene-body">${s.body}</div>
       ${s.empathy ? `<div class="empathy">${s.empathy}</div>` : ''}
@@ -1257,18 +1836,24 @@ function render(sid) {
     ${sharePanelHTML}
     <div class="nav-row">${back}${restart}</div>`;
 
+  restorePmChecks();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function go(sid) {
   const cur = document.getElementById('scene-container').dataset.current;
   history.push(cur);
+  if (history.length > 50) history.shift();
+  try { window.history.replaceState(null, '', '#' + sid); } catch (e) {}
   render(sid);
 }
 
 function goBack() {
   const prev = history.pop();
-  if (prev) render(prev);
+  if (prev) {
+    try { window.history.replaceState(null, '', '#' + prev); } catch (e) {}
+    render(prev);
+  }
 }
 
 function restart() {
@@ -1276,11 +1861,41 @@ function restart() {
   xp = 0;
   visited.clear();
   currentLevel = 1;
+  try { window.history.replaceState(null, '', '#start'); } catch (e) {}
   render('start');
 }
 
+const PM_TABS = [
+  ['pm_intro', 'Overview'],
+  ['pm_identify', '1. Identify'],
+  ['pm_scope', '2. Scope'],
+  ['pm_symbols', '3. Symbols'],
+  ['pm_map', '4. Map It'],
+  ['pm_lanes', '5. Swim Lanes'],
+  ['pm_action', '6. Take Action']
+];
+function buildPmTabs(activeSid) {
+  return '<div class="pm-tabs">' + PM_TABS.map(([id, label]) =>
+    `<button class="pm-tab${id === activeSid ? ' active' : ''}" onclick="go('${id}')">${label}</button>`
+  ).join('') + '</div>';
+}
+
+function savePmCheck(el) {
+  const key = el.dataset.pmKey;
+  if (!key) return;
+  if (el.checked) localStorage.setItem('pm_' + key, '1');
+  else localStorage.removeItem('pm_' + key);
+}
+function restorePmChecks() {
+  document.querySelectorAll('input[type="checkbox"][data-pm-key]').forEach(el => {
+    if (localStorage.getItem('pm_' + el.dataset.pmKey)) el.checked = true;
+  });
+}
+
 document.getElementById('hero-ziggy').src = ZIGGY.hero;
-render('start');
+const initialHash = (window.location.hash || '').slice(1);
+const initialScene = initialHash && scenes[initialHash] ? initialHash : 'start';
+render(initialScene);
 </script>
 </body>
 </html>
