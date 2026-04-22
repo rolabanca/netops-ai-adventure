@@ -807,19 +807,27 @@
   }
   .pm-node.pm-rect { border-radius: 6px; }
   .pm-node.pm-diamond {
-    border-radius: 2px;
-    transform: rotate(45deg);
-    padding: 1.1rem;
-    width: 200px;
-    height: 96px;
-    margin: 1rem 0;
+    width: 260px;
+    height: 110px;
+    min-width: 260px;
+    max-width: 260px;
+    padding: 0;
+    margin: .5rem 0;
+    border: none;
+    background: linear-gradient(135deg, rgba(239,159,39,.28) 0%, rgba(239,159,39,.12) 100%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-color: var(--amber);
-    background: linear-gradient(135deg, rgba(239,159,39,.08) 0%, var(--bg) 100%);
+    color: var(--amber-dark);
   }
-  .pm-node.pm-diamond > span { transform: rotate(-45deg); display: block; font-weight: 600; font-size: 13px; }
+  .pm-node.pm-diamond > span {
+    display: block;
+    padding: 0 2rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13.5px;
+  }
   .pm-node.pm-folder {
     border-radius: 0 8px 8px 8px;
     background: linear-gradient(135deg, rgba(127,119,221,.08) 0%, var(--bg) 100%);
